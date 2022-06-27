@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\AdminController;
@@ -20,22 +21,19 @@ use App\Http\Controllers\Admin\CrudController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 Auth::routes();
-Route::get('/sebaka', [App\Http\Controllers\SebakaController::class, 'sebaka'])->name('sebaka');
+Route::get('workers/{service}', [App\Http\Controllers\Worker\WorkerController::class, 'index'])->name('service-workers');//->middleware(['auth:web']);
 Route::get('/report', [App\Http\Controllers\ReportController::class, 'report'])->name('report');
 
 Route::prefix('user')->name('user.')->group(function(){
-  
+
     Route::middleware(['guest:web','PreventBackHistory'])->group(function(){
           Route::view('/login','dashboard.user.login')->name('login');
           Route::view('/register','dashboard.user.register')->name('register');
           Route::post('/create',[UserController::class,'create'])->name('create');
           Route::post('/check',[UserController::class,'check'])->name('check');
-
     });
 
     Route::middleware(['auth:web','PreventBackHistory'])->group(function(){
@@ -57,7 +55,7 @@ Route::prefix('user')->name('user.')->group(function(){
 });
 
 Route::prefix('admin')->name('admin.')->group(function(){
-       
+
     Route::middleware(['guest:admin','PreventBackHistory'])->group(function(){
           Route::view('/login','dashboard.admin.login')->name('login');
           Route::post('/check',[AdminController::class,'check'])->name('check');
@@ -70,7 +68,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/worker',[CrudController::class,'worker'])->name('worker');
         Route::get('/report',[CrudController::class,'order'])->name('report');
         Route::get('/user',[CrudController::class,'order'])->name('user');
-        
+
     });
 
 });

@@ -10,6 +10,11 @@ use App\Http\Requests\Worker\updateprofilerequest;
 
 class WorkerController extends Controller
 {
+
+    function index($service) {
+        $workers = Worker::where('service', $service)->get();
+        return view("workers")->with(['workers'=>$workers]);
+    }
     function create(Request $request){
           //Validate inputs
           $request->validate([
@@ -58,9 +63,8 @@ class WorkerController extends Controller
         ]);
 
         $creds = $request->only('email','password');
-
-        if( Auth::guard('worker')->attempt($creds) ){
-            return redirect()->route('worker.home');
+        if( Auth::guard('worker')->attempt($creds, 1) ){
+            return redirect('/');
         }else{
             return redirect()->route('worker.login')->with('fail','Incorrect Credentials');
         }
@@ -78,7 +82,7 @@ class WorkerController extends Controller
     }
     public function edit(){
         $worker = auth()->user();
-        return view ('dashboard.worker.edit')->with([
+        return view('dashboard.worker.edit')->with([
             'user' => $worker
         ]);
     }
@@ -97,7 +101,6 @@ class WorkerController extends Controller
         'about'=>$request->about,
 
         ]);
-        return redirect('/worker/profile');   
+        return redirect('/worker/profile');
     }
-    
 }
