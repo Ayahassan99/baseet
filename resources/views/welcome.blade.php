@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
@@ -14,7 +13,7 @@
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://127.0.0.1:8000"
+        <a class="navbar-brand" href="#"
           ><img class="logo" src="./assets/photos/logo.png"
         /></a>
         <div class="collapse navbar-collapse" id="navbarScroll">
@@ -23,12 +22,12 @@
             style="--bs-scroll-height: 100px"
           >
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="http://127.0.0.1:8000/user/login">
+              <a class="nav-link" aria-current="page" href="loginpage.html">
                 سجل دخولك</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/user/register">مستخدم جديد</a>
+              <a class="nav-link" href="signup-user.html">مستخدم جديد</a>
             </li>
           </ul>
 
@@ -43,37 +42,43 @@
             >
               خدماتنا
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/sebaka">سباكه</a></li>
+            <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="plumber.html">سباكه</a></li>
               <li><a class="dropdown-item" href="carpent.html">نجاره</a></li>
               <li><a class="dropdown-item" href="painter.html">نقاشه</a></li>
-              <li>
-                <a class="dropdown-item" href="cooling.html">تبريد و تكييف</a>
-              </li>
+              <li><a class="dropdown-item" href="cooling.html">تبريد و تكييف</a></li>
               <li><a class="dropdown-item" href="tailer.html">خياطه</a></li>
               <li><a class="dropdown-item" href="cleaner.html">نظافه</a></li>
-              <li>
-                <a class="dropdown-item" href="electrician.html">كهرباء</a>
-              </li>
+              <li><a class="dropdown-item" href="electrician.html">كهرباء</a></li>
               <li><a class="dropdown-item" href="iron.html">حداد</a></li>
               <li><a class="dropdown-item" href="tile.html">تركيب بلاط</a></li>
               <li><a class="dropdown-item" href="nurse.html">تمريض</a></li>
-              <li>
-                <a class="dropdown-item" href="caring.html"
-                  >رعاية اطفال / مسنين</a
-                >
-              </li>
+              <li><a class="dropdown-item" href="caring.html">رعاية اطفال / مسنين</a></li>
               <li><a class="dropdown-item" href="cook.html">طبخ</a></li>
             </ul>
           </div>
 
           <div class="collapse navbar-collapse" id="navbarScroll"></div>
-
-          <form class="d-flex" role="search">
+          <form class="d-flex m-20" role="search">
             <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
-            
-            <button class="btn search " type="submit">ابحث</button>
+            <button type="submit" class="search">
+              <span class="icon"><ion-icon name="search"></ion-icon></span>
+            </button>
           </form>
+
+          <div class="col-1"></div>
+
+          <div class="dropdown">
+            <a  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="icon"><ion-icon name="list"></ion-icon></span>
+            </a>
+
+            <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="orders-user.html">طلباتك</a></li>
+              <li><a class="dropdown-item" href="user-edit.html">تعديل البيانات</a></li>
+              <li><button class="dropdown-item danger" href="#">تسجيل الخروج</button></li>
+            </ul>
+          </div>
 
         </div>
       </div>

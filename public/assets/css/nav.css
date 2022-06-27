@@ -11,10 +11,10 @@ nav{
 }
 .logo{
     height: 5em;
-    
+
 }
 
-.search{
+/*.search{
     margin-left: 50px;
     margin-right: 10px;
     color: black;
@@ -23,5 +23,26 @@ nav{
 }
 .search:hover{
     border-color: blue;
+}*/
+
+.icon{
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: white;
+    background: transparent;
+    border-color: transparent;
+    direction: none;
+}
+.search{
+    background: transparent;
+    border-color: transparent;
 }
 
+.danger{
+    color: red;
+}
+.danger:hover{
+    color: white;
+    background: red;
+}
