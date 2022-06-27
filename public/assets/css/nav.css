@@ -1,0 +1,27 @@
+nav{
+    direction: rtl;
+    height: 5em;
+    background: #1f4e5f;
+    box-shadow: 4px 4px 4px #00000029;
+    position: fixed;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+.logo{
+    height: 5em;
+    
+}
+
+.search{
+    margin-left: 50px;
+    margin-right: 10px;
+    color: black;
+    background: white;
+    border-color: white;
+}
+.search:hover{
+    border-color: blue;
+}
+

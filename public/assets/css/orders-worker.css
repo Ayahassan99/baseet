@@ -1,0 +1,45 @@
+h2{
+    background-color: #c8e29d;
+    width: 50%;
+    font-size: xx-large;
+    padding: 2%;
+    margin: 5% 75% 5% 0%;
+    color: #1f4e5f;
+    border-radius: 20%;
+
+}
+
+.card {
+    width: 40%;
+    margin: 5% 2%;
+    background-color: #f2f299;
+}
+
+
+
+.arrange{
+    display:flex-direction;
+}
+
+
+.card-footer{
+    background-color: #c8e29d
+}
+
+.color{
+    background-color: #1f4e5f;
+    border-color: #1f4e5f;
+}
+
+.space{
+    margin: 0% 0% 2% 0%;
+}
+
+.arr{
+    padding: 0% 2% 2% 2%;
+}
+
+input{
+    border: none;
+    outline: none;
+}

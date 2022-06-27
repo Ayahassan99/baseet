@@ -1,0 +1,52 @@
+.backgroud{
+    margin-top: 7em;
+    background: #909f9f0c;
+    width: 70%;
+    margin-right: 172px;
+
+}
+body{
+    direction: rtl;
+}
+.back{
+    background: #1f4e5f;
+}
+.padding{
+    padding: 70px;
+}
+.position-absolute   {
+    top: 100px;
+    right: -100px;
+}
+
+.color{
+    background-color: #1f4e5f;
+    border-color: #1f4e5f;
+}
+
+.feedback{
+    width: 57rem;
+    margin:5% 19% ;
+}
+
+.card-header{
+    background-color: #1f4e5f;
+    font-size: larger;
+    color: white;
+    padding-right: 6% ;
+
+}
+
+.card-footer{
+    background-color: #1f4e5f;
+    font-size: larger;
+    color: white;
+    padding-right: 6% ;
+
+}
+
+.publish{
+    background-color: #f2f299;
+    border-color: #f2f299;
+    color: black;
+}

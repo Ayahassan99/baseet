@@ -1,0 +1,16 @@
+body{
+    background-color: white;
+}
+#card{
+    background-color: #f2f299;
+    padding: auto;
+}
+.card-img-top{
+    height: 70%;
+    width: 70%;
+    margin: 10% 13%;
+}
+#space{
+    padding: 5%;
+    background-color: black;
+}

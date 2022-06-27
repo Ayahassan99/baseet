@@ -1,0 +1,93 @@
+body{
+    direction: rtl;
+}
+.home {
+    height: 500px;
+    margin-top: 80px;
+    background-image: url("../photos/33.jpg");
+    background-size: cover;
+    background-position: center 48%;
+    background-repeat: no-repeat;  }
+  
+  .homecenter {
+      z-index: 1;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .homeimg { 
+    width: 100%;
+    
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: #3b3b3be0;;
+    opacity: 0.7;
+  }
+  .homecenter h1 ,  .homecenter h3 {
+    font-weight: normal;
+    font-family: "Noto Kufi Arabic", "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #fff8f8;
+    text-shadow: #00000086;
+ 
+  }
+  .btn-lg{
+    background-color:  #5E9387;
+    color: white;
+   
+    font-weight: bold;
+    font-family: "Noto Kufi Arabic", "Open Sans", sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 17px;
+    line-height: 1.8em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 20px;
+}
+  
+.jobcenter {
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .jobimg { 
+    width: 100%;
+    height: auto;
+    height: 135px;
+    filter: grayscale(10%);
+    opacity: 0.7;
+  }
+h4{
+    color: #fff8f8;
+    text-shadow: 1px 2px 4px #000000;
+
+}
+.top{
+  margin-top: 90px;
+
+}
+.plus{
+  background-color: #F2F299;
+  color: #000000;
+  outline: none;
+  font-weight: bold;
+  border: none;
+
+}

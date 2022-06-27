@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: xx-large;
+    color: #5e9387;
+}
+
+.container{
+    width: 2000;
+    left: 0;
+    background: #f1f1f1;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    background: white;
+}
+
+.content{
+    position: relative;
+    margin-top: 10vh;
+}
+

@@ -1,0 +1,54 @@
+body{
+    background:linear-gradient(90deg,white,#f2f299) ;
+}
+h2{
+    background-color: #f2f299;
+    width: 50%;
+    font-size: xx-large;
+    padding: 2%;
+    margin: 5% 75% 5% 0%;
+    color: #1f4e5f;
+    border-radius: 20%;
+
+}
+
+.card {
+    width: 40%;
+    margin: 5% 28% 7%;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: #1f4e5f;
+}
+
+.photo{
+    width: 150px;;
+    height:150px;
+}
+.photo img { 
+    height: 100%;
+    padding: 5%;
+}
+
+.arrange{
+    display:flex-direction;
+}
+
+
+.card-footer{
+    background-color:#c8e29d;
+    border-color: transparent;
+}
+
+.color{
+    background-color: #1f4e5f;
+    border-color: #1f4e5f;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.center{
+    margin: 0 25% 2% 0%; 
+}

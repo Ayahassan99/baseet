@@ -1,0 +1,96 @@
+body{
+      font-family: 'Droid Arabic Naskh', serif;
+      background:linear-gradient(90deg,white,#f2f299) ;
+  
+}
+.home {
+    height: 300px;
+    margin-top: 80px;
+    background-size: cover;
+    background-position: center 48%;
+    background-repeat: no-repeat;  }
+  
+  .homecenter {
+      z-index: 1;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .homecenter h1 ,  .homecenter h3 {
+    font-weight: bold;
+    font-family: "Noto Kufi Arabic", "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #1f4e5f;
+    text-shadow: #00000086;
+
+  }
+  .btn-lg{
+    background-color: #1f4e5f;
+    color: white;
+    font-weight: bold;
+    font-family: "Noto Kufi Arabic", "Open Sans", sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 17px;
+    line-height: 1.8em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 20px;
+}
+  
+.jobcenter {
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .jobimg { 
+    width: 100%;
+    height: auto;
+    height: 135px;
+    filter: grayscale(10%);
+    
+  }
+
+.jobimg:hover{
+  opacity: 0.5;
+}
+
+h4{
+  font-weight: bold;
+    color: white;
+    text-shadow: 1px 2px 4px #000000;
+
+}
+.top{
+  margin-top: 90px;
+
+}
+.plus{
+  background-color: #F2F299;
+  color: #000000;
+  outline: none;
+  font-weight: bold;
+  border: none;
+}
+ .plus:hover{
+  background: #f9f9c8;
+ }
+.card{
+  box-shadow: 4px 4px 4px #00000029;
+
+}
