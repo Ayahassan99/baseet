@@ -84,6 +84,7 @@ Route::prefix('worker')->name('worker.')->group(function(){
     Route::middleware(['auth:worker','PreventBackHistory'])->group(function(){
          Route::view('/home','dashboard.worker.home')->name('home');
          Route::post('logout',[WorkerController::class,'logout'])->name('logout');
+         Route::get('logout',[WorkerController::class,'logout'])->name('logout');
          Route::get('/add-new',[WorkerController::class,'add'])->name('add');
          Route::get('/profile/{id?}',[WorkerController::class,'profile'])->name('profile');
          Route::get('/edit',[WorkerController::class,'edit'])->name('edit');
