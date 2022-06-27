@@ -120,7 +120,7 @@
                 </div>
             @else
                 <div class="card-body">
-                    <a href="http://127.0.0.1:8000/worker/worder" class="btn btn-primary">اعمالك </a>
+                    <a href="{{route('worker.order')}}" class="btn btn-primary">اعمالك </a>
                     <a href="http://127.0.0.1:8000/worker/worder" class="btn btn-primary"> تعديل </a>
                 </div>
             @endif
