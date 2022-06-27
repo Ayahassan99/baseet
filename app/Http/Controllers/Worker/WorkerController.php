@@ -11,8 +11,17 @@ use App\Http\Requests\Worker\updateprofilerequest;
 class WorkerController extends Controller
 {
 
-    function index($service) {
-        $workers = Worker::where('service', $service)->get();
+    function index(Request $request, $service) {
+        $city = $request->query->get('city');
+        $name = $request->query->get('name');
+        $workers = Worker::where('service', $service)->where('city', $city)->where('name', 'like', "%$name%")
+            ->get();
+        return view("workers")->with(['workers'=>$workers]);
+    }
+    function search(Request $request) {
+        $name = $request->query->get('name');
+        $workers = Worker::where('name', 'like', "%$name%")
+            ->get();
         return view("workers")->with(['workers'=>$workers]);
     }
     function create(Request $request){
@@ -74,11 +83,18 @@ class WorkerController extends Controller
         Auth::guard('worker')->logout();
         return redirect('/');
     }
-    public function profile(){
-        $worker = auth()->user();
+    public function profile($id = 0){
+        if ($id == 0) {
+            $worker = auth()->user();
+            $showMyProfile = true;
+        } else {
+            $worker = Worker::find($id);
+            $showMyProfile = false;
+        }
         return view ('dashboard.worker.profile')->with([
-            'user' => $worker
-             ]);
+            'user' => $worker,
+            'showMyProfile' => $showMyProfile
+        ]);
     }
     public function edit(){
         $worker = auth()->user();

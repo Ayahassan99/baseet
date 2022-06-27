@@ -63,8 +63,8 @@
             </div>
 
             <div class="collapse navbar-collapse" id="navbarScroll"></div>
-            <form class="d-flex m-20" role="search">
-                <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
+            <form class="d-flex m-20" action="{{route('service-workers', 'sebaka')}}" method="get" role="search">
+                <input name="name" class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
                 <button type="submit" class="search">
                     <span class="icon"><ion-icon name="search"></ion-icon></span>
                 </button>

@@ -85,7 +85,7 @@ Route::prefix('worker')->name('worker.')->group(function(){
          Route::view('/home','dashboard.worker.home')->name('home');
          Route::post('logout',[WorkerController::class,'logout'])->name('logout');
          Route::get('/add-new',[WorkerController::class,'add'])->name('add');
-         Route::get('/profile',[WorkerController::class,'profile'])->name('profile');
+         Route::get('/profile/{id?}',[WorkerController::class,'profile'])->name('profile');
          Route::get('/edit',[WorkerController::class,'edit'])->name('edit');
          Route::put('/update',[WorkerController::class,'update'])->name('update');
          Route::get('/worder',[WorderController::class,'order'])->name('order');
