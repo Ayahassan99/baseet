@@ -26,6 +26,7 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 Auth::routes();
 Route::get('workers/{service}', [App\Http\Controllers\Worker\WorkerController::class, 'index'])->name('service-workers');//->middleware(['auth:web']);
 Route::get('/report', [App\Http\Controllers\ReportController::class, 'report'])->name('report');
+Route::post('/report', [App\Http\Controllers\ReportController::class, 'savereport'])->name('save.report');
 
 Route::prefix('user')->name('user.')->group(function(){
 
@@ -66,8 +67,13 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::post('/logout',[AdminController::class,'logout'])->name('logout');
         Route::get('/order',[CrudController::class,'order'])->name('order');
         Route::get('/worker',[CrudController::class,'worker'])->name('worker');
-        Route::get('/report',[CrudController::class,'order'])->name('report');
-        Route::get('/user',[CrudController::class,'order'])->name('user');
+        Route::get('/report',[CrudController::class,'report'])->name('report');
+        Route::get('/user',[CrudController::class,'user'])->name('user');
+        Route::get('/creatuser',[CrudController::class,'creatuser'])->name('creatuser');
+        Route::get('/edituser',[CrudController::class,'edituser'])->name('edituser');
+        Route::get('/creatworker',[CrudController::class,'creatworker'])->name('creatworker');
+        Route::get('/editworker',[CrudController::class,'editworker'])->name('editworker');
+
 
     });
 
@@ -84,7 +90,6 @@ Route::prefix('worker')->name('worker.')->group(function(){
     Route::middleware(['auth:worker','PreventBackHistory'])->group(function(){
          Route::view('/home','dashboard.worker.home')->name('home');
          Route::post('logout',[WorkerController::class,'logout'])->name('logout');
-         Route::get('logout',[WorkerController::class,'logout'])->name('logout');
          Route::get('/add-new',[WorkerController::class,'add'])->name('add');
          Route::get('/profile/{id?}',[WorkerController::class,'profile'])->name('profile');
          Route::get('/edit',[WorkerController::class,'edit'])->name('edit');

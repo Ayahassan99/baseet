@@ -39,7 +39,7 @@
           <td>radwa32000@gmail.com</td>-->
            <td>
        <a class="nav-link" href="http://127.0.0.1:8000/user/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل الخروج</a>
-               <form action="http://127.0.0.1:8000/user/logout" method="post" class="d-none" id="logout-form"><input type="hidden" name="_token" value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"></form>
+               <form action="http://127.0.0.1:8000/user/logout" method="post" class="d-none" id="logout-form"><input type="hidden" name="_token" value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy">@csrf</form>
                                  </td>
                              </tr>
           

@@ -15,7 +15,7 @@
         <div class="content">
         <div class="header dash">ادارة العاملين</div>
         <div class="pt-3 ">
-            <a href="signup-worker.html" class="btn btn-success" > اضافة عامل جديد </a>
+            <a href="http://127.0.0.1:8000/admin/creatworker" class="btn btn-success" > اضافة عامل جديد </a>
             <button  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" >حذف</button>	
             
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -56,57 +56,30 @@
         </thead>
 
         <tbody>
+
+        @foreach($workers as $worker)
+
             <tr>
+
             <td scope="row">
                 <input type="checkbox" id="checkbox1" >
                 <label for="checkbox1"></label>
             </td>
-            <td>احمد</td>
-            <td>@mail.com</td>
-            <td>0122359874</td>
-            <td>الاسكندريه</td>
-            <td>سيدى بشر</td>
-			<td>ذكر</td>
-			<td>نجار</td>
-			<td>180</td>
-			<td>صوره</td>
-			<td>نجار باب و شباك</td>
-            <td><a href="woker-edit.html" class="btn btn-dark">تعديل</a></td>
-            </tr>
-            <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1"></label>
-            </td>
-            <td>على</td>
-            <td>@mail.com</td>
-            <td>01552369</td>
-            <td>البحيره</td>
-            <td>كفرالدوار</td>
-			<td>ذكر</td>
-			<td>سباك</td>
-			<td>100</td>
-			<td>صورة</td>
-			<td>سباكة جميع انواع الصرف</td>
-            <td><a href="worker-edit.html" class="btn btn-dark">تعديل</a></td>
+            <td>{{$worker['name']}}</td>
+            <td>{{$worker['email']}}</td>
+            <td>{{$worker['phone']}}</td>
+            <td>{{$worker['city']}}</td>
+            <td>{{$worker['region']}}</td>
+			<td>{{$worker['gender']}}</td>
+			<td>{{$worker['service']}}</td>
+			<td>{{$worker['hour']}}</td>
+			<td>{{$worker['photo']}}</td>
+			<td>{{$worker['about']}}</td>
+            <td><a href="http://127.0.0.1:8000/admin/editworker" class="btn btn-dark">تعديل</a></td>
             </tr>
 
-            <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1"></label>
-            </td>
-            <td>نوره</td>
-            <td>@gmail.com</td>
-            <td>011259837</td>
-            <td>القاهره</td>
-            <td>هرم</td>
-			<td>انثى</td>
-			<td>تمريض</td>
-			<td>300</td>
-			<td>صوره</td>
-			<td>رعايه طبيه منزليه متكامله</td>
-            <td><a href="worker-edit.html" class="btn btn-dark">تعديل</a></td>
+            @endforeach
+
 
         </tbody>
         </table>

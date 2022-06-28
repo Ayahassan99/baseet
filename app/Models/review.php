@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class review extends Model
 {
     use HasFactory;
-    protected $table = 'services';
     protected $fillable = [
-        'label',
-        'value',
-        'image',
+        'text',
+        'userid',
     ];
    
 }

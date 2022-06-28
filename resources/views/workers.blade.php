@@ -1,7 +1,7 @@
 @include("partials/header")
 <div class="container top">
     <div class="row row-cols-1 row-cols-lg-3">
-        <form action="{{route('service-workers','negara')}}" method="get">
+        <form action="#" method="get">
             <select name="city" id="">
                 <option value="portsaid">
                     Portsaid

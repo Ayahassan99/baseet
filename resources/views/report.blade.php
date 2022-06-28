@@ -10,17 +10,20 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
 </head>
 <body>
-
-
+    @if(Session::has('report'))
+    <span>{{Session::get('report')}}</span>
+    @endif
+    <form method = "post" action="{{route('save.report')}}">
+        @csrf
     <div class="d-flex flex-column mb-3 write text-center">
         <h1 >اكتب مشكلتك</h1>
     </div>
 
-    <textarea  cols="60" rows="10" style="margin-right: 35%;"></textarea>
+    <textarea  name="text" cols="60" rows="10" style="margin-right: 35%;"></textarea>
 
-    <button type="button" class="btn btn-secondary btn-lg" >ارسال</button>
+    <button type="submit" value="submit" class="btn btn-secondary btn-lg" >ارسال</button>
 
-
+</form>
 
 </body>
 </html>

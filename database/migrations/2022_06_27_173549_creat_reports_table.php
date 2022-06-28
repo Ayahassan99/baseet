@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class CreatReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->id("worker_id");
-            $table->string("label");
-            $table->string("value");
-            $table->string("image");
+            $table->string("text");
+            $table->foreignId("userid")->constrained('users');
+            $table->foreignId("workerid")->constrained('workers');       
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        //
     }
 }

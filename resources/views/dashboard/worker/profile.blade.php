@@ -37,7 +37,7 @@
                             الخروج</a>
                         <form action="http://127.0.0.1:8000/worker/logout" method="post" class="d-none"
                               id="logout-form"><input type="hidden" name="_token"
-                                                      value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"></form>
+                                                      value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
                     </td>
                 </tr>
 
