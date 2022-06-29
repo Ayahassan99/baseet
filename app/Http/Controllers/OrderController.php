@@ -45,6 +45,13 @@ class OrderController extends Controller
     public function show($id) {
         $order = Order::where('id', $id)->first();
         $order->username = Auth::guard("worker")->check() ? $order->user->name : $order->worker->name;
+        $order->statusText = $this->order_statuses[$order->status];
         return view("orders.show")->with(["order"=>$order]);
+    }
+    public function update_status(Request $request, Order $order) {
+        $order->status = $request->get('status');
+        $order->save();
+        $return_path = auth()->guard('worker')->check() ? 'worker.order.show' : 'user.order.show';
+        return redirect()->route($return_path, $order->id);
     }
 }
