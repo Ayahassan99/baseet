@@ -7,7 +7,7 @@
     <div class="homecenter position-absolute">
         <h1>موقعك لايجاد صنايعى او مقدم خدمة بسهولة</h1>
         <h3>أنجز أعمالك بسهولة</h3>
-        <button type="button" class="btn btn-lg">سجل الان</button>
+        <button type="button" class="btn btn-lg" >سجل الان</button>
     </div>
 </div>
 <div class="container mt-4">

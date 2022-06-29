@@ -7,14 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/crud.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
 </head>
 <body>
-
+<div class="side-menue">
+    <div class="brand-name">
+        <img  src="./assets/photos/logo.png" alt="">
+    </div>
+    <ul>
+        <li>
+            <a href="crud-worker.html" class="link">العاملين</a>
+        </li>
+        <li>
+            <a href="crud-user.html" class="link">العملاء</a>
+        </li>
+        <li>
+            <a href="crud-order.html" class="link">الطلبات</a>
+        </li>
+        <li>
+            <a href="crud-report.html" class="link">التقارير</a>
+        </li>
+    </ul>
+</div>
     <div class="container">
         <div class="content">
         <div class="header dash">ادارة الطلبات</div>
-        
+
 
     <table class="table table-borded">
         <thead>

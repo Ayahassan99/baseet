@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="/assets/css/bootstrap.css">
-        <link rel="stylesheet" href="/assets/css/reg.css">
-        <link rel="stylesheet" href="/assets/css/nav.css">
+        <link rel="stylesheet" href="./assets/css/bootstrap.css">
+        <link rel="stylesheet" href="./assets/css/adding-form.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
 </head>
 <body>
-    <body>
           <div class="container">
             <div class="row">
               <div class="col-3">
-            
+
               </div>
               <div class="col-6 ">
                 <div class="flex-container">
-                    <h2 style="color: #1f4e5f;">تعديل البيانات الشخصيه </h2>
+                    <h2 class="h2">تعديل بيانات العميل </h2>
                 <form>
                     <div class="mb-3">
                         <div class="txt">
@@ -64,15 +61,14 @@
                             <div class="col-2"> </div>
                             <div class="col-8 ">
                                 <input  type="submit" value="تعديل ">
-                            </div> 
+                            </div>
                           <div class="col-2 "> </div>
-                    
 
-                          
-    
+
+
+
         </form>
-        <script src="/assets/js/bootstrap.js"></script>
-        <script src="/assets/js/sidemenu.js"></script>
-        <script src="/assets/js/signup.js"></script>
+        <script src="./assets/js/bootstrap.js"></script>
+        <script src="./assets/js/signup.js"></script>
 </body>
 </html>
