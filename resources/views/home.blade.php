@@ -1,5 +1,5 @@
 @push('styles')
-    <link rel="stylesheet" href="/assets/css/home.css" >
+<link rel="stylesheet" href="/assets/css/home.css">
 @endpush
 
 @include("partials/header")
@@ -7,27 +7,23 @@
     <div class="homecenter position-absolute">
         <h1>موقعك لايجاد صنايعى او مقدم خدمة بسهولة</h1>
         <h3>أنجز أعمالك بسهولة</h3>
-        @if(auth()->check())
-        <button type="button" class="btn btn-lg" >سجل الان</button>
+        @if(auth())
+        <button type="button" class="btn btn-lg">سجل الان</button>
         @endif
     </div>
 </div>
 <div class="container mt-4">
     <div class="row row-cols-2 row-cols-lg-4">
         @foreach($services as $service)
-            <div class="col p-4">
-                <div class="position-relative job">
-                    <a href="{{route('service-workers', $service->value)}}">
-                        <img
-                            src="{{$service->image}}"
-                            class="jobimg"
-                            alt="Cinque Terre"
-                        /></a>
-                    <div class="jobcenter position-absolute">
-                        <h4 class="text-center">{{$service->label}}</h4>
-                    </div>
+        <div class="col p-4">
+            <div class="position-relative job">
+                <a href="{{route('service-workers', $service->value)}}">
+                    <img src="{{$service->image}}" class="jobimg" alt="Cinque Terre" /></a>
+                <div class="jobcenter position-absolute">
+                    <h4 class="text-center">{{$service->label}}</h4>
                 </div>
             </div>
+        </div>
         @endforeach
 
     </div>

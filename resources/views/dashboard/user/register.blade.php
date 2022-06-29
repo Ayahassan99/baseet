@@ -10,7 +10,7 @@
           </div>
           <div class="col-6 ">
             <div class="flex-container">
-                <h2 class="h2">مستخدم جديد</h2>
+                <h2 class="h2">عميل جديد </h2>
             <form action="{{ route('user.create') }}" method="post" autocomplete="off" >
             @if (Session::get('success'))
                          <div class="alert alert-success">
@@ -38,17 +38,17 @@
 
                     </div>
                     <div class="txt">
-                        <input type="password" class="txt" required name="password" value="{{ old('password') }}">
+                        <input type="password" class="txt" required name="password">
                         <span class="text-danger">@error('password'){{ $message }} @enderror</span>
                         <label>كلمة السر</label>
                     </div>
                     <div class="txt">
-                        <input type="password" class="txt" required name="cpassword" value="{{ old('cpassword') }}">
+                        <input type="password" class="txt" required name="cpassword">
                         <span class="text-danger">@error('cpassword'){{ $message }} @enderror</span>
                         <label>تاكيد كلمة السر</label>
-                   </div>
+                </div>
                    <div class="txt">
-                      <input type="tel" class="txt" required name="phone">
+                      <input type="tel" class="txt" required name="phone" value="{{ old('phone')}}">
                       <label>رقم التليفون</label>
 
                   </div>

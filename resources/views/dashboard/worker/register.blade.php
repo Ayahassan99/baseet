@@ -10,7 +10,7 @@
           </div>
           <div class="col-6 ">
             <div class="flex-container">
-                <h2 style="color: #1f4e5f;">مستخدم جديد</h2>
+                <h2 style="color: #1f4e5f;">عامل جديد</h2>
             <form action="{{ route('worker.create') }}" enctype="multipart/form-data" method="post" autocomplete="off">
             @if (Session::get('success'))
                          <div class="alert alert-success">
@@ -130,7 +130,7 @@
                           <label class="label extrapadding gender" for="city">الاجر/ساعة</label>
                         </div>
                         <div class="col-4">
-                          <input type="text" name="hour" class="form-control"  aria-label="Default select example">
+                          <input type="number" name="hour" class="form-control"  aria-label="Default select example">
                         </div>
                         <div class="col-4 "> </div>
 

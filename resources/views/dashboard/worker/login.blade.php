@@ -32,7 +32,6 @@
                             <span class="text-danger">@error('password'){{ $message }} @enderror</span>
                             <label>كلمة السر</label>
                         </div>
-                        <div class="pass">نسيت كلمة السر؟</div>
                         <div class="row">
                             <div class="col-2 "> </div>
                             <div class="col-8 "> <input type="submit" value="تسجيل الدخول"></div>
