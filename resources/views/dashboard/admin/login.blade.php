@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
-            
+
           <a class="navbar-brand" onclick="openNav();" href="#">
             <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" style="color: white">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -40,28 +40,28 @@
           </div>
         </div>
       </nav>
-      
+
 
     <div class="container">
 <div class="row">
     <div class="col-3">
-    
+
         <img class="worker" src="/assets/photos/mechanic-presenting-something-removebg-preview.png">
-        
+
     </div>
     <div class="col-5">
         <div class="position-relative">
             <div class="position-absolute top-50 start-50 center">
 
 
-        <h2 style="color: #1f4e5f;">تسجيل الدخول</h2>
+        <h2 class="h2">تسجيل الدخول</h2>
         <form action="{{ route('admin.check') }}" method="post">
         @csrf
             <div class="txt">
                 <input type="text" class="txt" name="email" required value="{{ old('email') }}">
                 <span class="text-danger">@error('email'){{ $message }} @enderror</span>
                 <label>الاسم</label>
-                
+
             </div>
             <div class="txt">
                 <input type="password" class="txt" name="password" required   value="{{ old('password') }}">
@@ -71,14 +71,14 @@
             <div class="pass">نسيت كلمة السر؟</div>
             <div class="row">
               <div class="col-2 "> </div>
-              <div class="col-8 ">   <input  type="submit" value="تسجيل الدخول"></div> 
+              <div class="col-8 ">   <input  type="submit" value="تسجيل الدخول"></div>
            <div class="col-2 "> </div>
        </div>
             <div class="signup-link">
-                لست مشترك؟ 
+                لست مشترك؟
                 <a href="signup.html">اشترك</a>
             </div>
-   
+
     </form>
 
 

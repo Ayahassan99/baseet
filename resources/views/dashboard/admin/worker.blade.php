@@ -10,14 +10,33 @@
     <link rel="stylesheet" href="/assets/css/crud.css">
 </head>
 <body>
+<div class="side-menue">
+    <div class="brand-name">
+        <img  src="./assets/photos/logo.png" alt="">
+    </div>
+    <ul>
+        <li>
+            <a href="crud-worker.html" class="link">العاملين</a>
+        </li>
+        <li>
+            <a href="crud-user.html" class="link">العملاء</a>
+        </li>
+        <li>
+            <a href="crud-order.html" class="link">الطلبات</a>
+        </li>
+        <li>
+            <a href="crud-report.html" class="link">التقارير</a>
+        </li>
+    </ul>
+</div>
 
     <div class="container">
         <div class="content">
         <div class="header dash">ادارة العاملين</div>
         <div class="pt-3 ">
             <a href="signup-worker.html" class="btn btn-success" > اضافة عامل جديد </a>
-            <button  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" >حذف</button>	
-            
+            <button  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" >حذف</button>
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -33,9 +52,9 @@
 </div>
 
 
-            
+
         </div>
-        
+
 
     <table class="table table-borded">
         <thead>
