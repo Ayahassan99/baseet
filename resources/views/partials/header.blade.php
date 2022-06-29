@@ -51,18 +51,18 @@
                         خدماتنا
                     </a>
                     <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="plumber.html">سباكه</a></li>
-                        <li><a class="dropdown-item" href="carpent.html">نجاره</a></li>
-                        <li><a class="dropdown-item" href="painter.html">نقاشه</a></li>
-                        <li><a class="dropdown-item" href="cooling.html">تبريد و تكييف</a></li>
-                        <li><a class="dropdown-item" href="tailer.html">خياطه</a></li>
-                        <li><a class="dropdown-item" href="cleaner.html">نظافه</a></li>
-                        <li><a class="dropdown-item" href="electrician.html">كهرباء</a></li>
-                        <li><a class="dropdown-item" href="iron.html">حداد</a></li>
-                        <li><a class="dropdown-item" href="tile.html">تركيب بلاط</a></li>
-                        <li><a class="dropdown-item" href="nurse.html">تمريض</a></li>
-                        <li><a class="dropdown-item" href="caring.html">رعاية اطفال / مسنين</a></li>
-                        <li><a class="dropdown-item" href="cook.html">طبخ</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','sebaka')}}">سباكه</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','negara')}}">نجاره</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','nasha')}}">نقاشه</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','tabreed')}}">تبريد و تكييف</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','kheta')}}">خياطه</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','nazafa')}}">نظافه</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','kahrba')}}">كهرباء</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','hada')}}">حداد</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','balat')}}">تركيب بلاط</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','tamreed')}}">تمريض</a></li>
+                        <li><a class="dropdown-item" href="c{{route('service-workers','chelidern')}}">رعاية اطفال / مسنين</a></li>
+                        <li><a class="dropdown-item" href="{{route('service-workers','food')}}">طبخ</a></li>
                     </ul>
                 </div>
 
@@ -97,7 +97,7 @@
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
                         <form action="{{route('user.logout')}}" method="post" class="d-none"
-                              id="logout-form">> @csrf</form>
+                                id="logout-form">> @csrf</form>
                     </td>
                 </tr>
                     @elseif(Auth::guard('admin'))->check())
@@ -105,11 +105,11 @@
 
                     <td>
                         <a class="nav-link link-danger" href="http://127.0.0.1:8000/admin/logout"
-                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
                         <form action="http://127.0.0.1:8000/admin/logout" method="post" class="d-none"
-                              id="logout-form"><input type="hidden" name="_token"
-                                                      value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
+                                id="logout-form"><input type="hidden" name="_token"
+                                value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
                     </td>
                 </tr>
                     @else()

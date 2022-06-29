@@ -38,7 +38,7 @@
        </div>
             <div class="signup-link">
                 لست مشترك؟
-                <a href="signup.html">اشترك</a>
+                <a href="{{route(user.order)}}">اشترك</a>
             </div>
 
     </form>

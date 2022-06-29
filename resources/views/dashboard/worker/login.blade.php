@@ -39,7 +39,7 @@
                         </div>
                         <div class="signup-link">
                             لست مشترك؟
-                            <a href="{{route('user.register')}}">اشترك</a>
+                            <a href="{{route('worker.register')}}">اشترك</a>
                         </div>
 
                     </form>
