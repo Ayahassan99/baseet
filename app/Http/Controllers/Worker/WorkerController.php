@@ -32,9 +32,8 @@ class WorkerController extends Controller
             ->get();
         return view("workers")->with(['workers' => $workers]);
     }
-    function create(Request $request)
-    {
-        //Validate inputs
+    function create(Request $request){
+          //Validate inputs
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:workers,email',

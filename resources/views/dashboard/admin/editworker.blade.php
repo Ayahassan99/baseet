@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="./assets/css/bootstrap.css">
-        <link rel="stylesheet" href="./assets/css/adding-form.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/css/adding-form.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
 </head>
 <body>
@@ -129,8 +129,8 @@
 
 
         </form>
-        <script src="./assets/js/bootstrap.js"></script>
-        <script src="./assets/js/sidemenu.js"></script>
-        <script src="./assets/js/signup.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+        <script src="/assets/js/sidemenu.js"></script>
+        <script src="/assets/js/signup.js"></script>
 </body>
 </html>
