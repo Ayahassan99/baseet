@@ -95,7 +95,7 @@
                         <td>{{$worker['hour']}}</td>
                         <td>{{$worker['photo']}}</td>
                         <td>{{$worker['about']}}</td>
-                        <td><a href="http://127.0.0.1:8000/admin/editworker" class="btn btn-dark">تعديل</a></td>
+                        <td><a href="{{route('admin.editworker', $worker->id)}}" class="btn btn-dark">تعديل</a></td>
                     </tr>
 
                     @endforeach

@@ -82,7 +82,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/edituser',[ CreatuserController::class,'edituser'])->name('edituser');
         Route::put('/update',[CreatuserController::class,'update'])->name('update');
         Route::get('/creatworker',[CreatworkerController::class,'creatworker'])->name('creatworker');
-        Route::get('/editworker',[CreatworkerController::class,'editworker'])->name('editworker');
+        Route::get('/editworker/{id}',[CreatworkerController::class,'editworker'])->name('editworker');
         Route::put('/update',[CreatworkerController::class,'update'])->name('update');
 
 
