@@ -27,13 +27,24 @@ class OrderController extends Controller
         $orders = Order::where('userid', $userId)->get();
         $services = helpers::getServicesAsAssociative();
         for ($i = 0; $i < count($orders); $i++) {
+            $orders[$i]->username = Auth::guard("worker")->check() ? $orders[$i]->user->name : $orders[$i]->worker->name;
             $orders[$i]->service = $services[$orders[$i]->worker->service];
             $orders[$i]->status = $this->order_statuses[$orders[$i]->status];
         }
         return view("orders.list")->with(["orders"=>$orders]);
     }
+    public function list() {
+        $orders = Order::all();
+        $services = helpers::getServicesAsAssociative();
+        for ($i = 0; $i < count($orders); $i++) {
+            $orders[$i]->service = $services[$orders[$i]->worker->service];
+            $orders[$i]->status = $this->order_statuses[$orders[$i]->status];
+        }
+        return view("dashboard.admin.order")->with(["orders"=>$orders]);
+    }
     public function show($id) {
         $order = Order::where('id', $id)->first();
+        $order->username = Auth::guard("worker")->check() ? $order->user->name : $order->worker->name;
         return view("orders.show")->with(["order"=>$order]);
     }
 }

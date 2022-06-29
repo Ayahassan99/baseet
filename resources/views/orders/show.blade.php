@@ -9,10 +9,10 @@
                         <img src="/assets/photos/sabak.jpg" alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">اسم العامل</h5>
-                        <p class="card-text">الحرفه</p>
-                        <p class="card-text"> حالة الطلب : تم الرفض </p>
-                        <p class="card_text">تاريخ الطلب</p>
+                        <h5 class="card-title">{{$order->username}}</h5>
+                        <p class="card-text">{{$order->service}}</p>
+                        <p class="card-text"> حالة الطلب : {{$order->status}} </p>
+                        <p class="card_text">{{\Carbon\Carbon::make($order->created_at)->format("h:mA d-m-Y")}}</p>
                         <p class="card_text">وقت الطلب</p>
                     </div>
             </div>
