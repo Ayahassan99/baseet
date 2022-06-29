@@ -57,12 +57,20 @@ class UserController extends Controller
         Auth::guard('web')->logout();
         return redirect('/');
     }
-    public function profile(){
-        $user = auth()->user();
+    public function profile($id = 0){
+        if ($id == 0) {
+            $user = auth()->user();
+            $showMyProfile = true;
+        } else {
+            $user = User::find($id);
+            $showMyProfile = false;
+        }
         return view ('dashboard.user.profile')->with([
-            'user' => $user
+            'user' => $user,
+            'showMyProfile' => $showMyProfile
         ]);
     }
+    
     public function edit(){
         $user = auth()->user();
         return view ('dashboard.user.edit')->with([
@@ -81,11 +89,11 @@ class UserController extends Controller
         'city'=>$request->city,
         'region'=>$request->region,
         ]);
-        return redirect('/user/profile');   
+        return redirect('/user/profile');
     }
 }
-   
 
-        
+
+
 
 

@@ -22,19 +22,26 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                     @if(Auth::guard('worker')->check())
                         <a class="nav-link ps-5 " href="{{route('worker.profile')}}">الملف الشخصى</a>
-                    
+                        <a class="nav-link ps-5 " href="{{route('worker.worder')}}">اعمالى </a>
+
                     @elseif(auth()->check())
                     <a class="nav-link ps-5 " href="{{route('user.profile')}}">الملف الشخصى</a>
-                    <a class="nav-link ps-5 " href="{{route('user.edit')}}">تعديل الملف الشخصى  </a>
                     <a class="nav-link ps-5 " href="{{route('user.uorder')}}">طلباتى  </a>
 
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route('user.login')}}">
-                            سجل دخولك</a>
+                        <a class="nav-link ps-5" href="{{route('worker.register')}}"> عامل جديد </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('user.register')}}">مستخدم جديد</a>
+                        <a class="nav-link ps-5" aria-current="page" href="{{route('worker.login')}}">
+                            تسجيل دخول عامل </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5" href="{{route('user.register')}}"> عميل جديد</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5" aria-current="page" href="{{route('user.login')}}">
+                            تسجيل دخول عميل </a>
                     </li>
                     @endif
                 </ul>
@@ -74,23 +81,20 @@
                     <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
                     @if(Auth::guard('worker')->check())
                     <tr>
-                    <!-- <td>Radwa samir</td>
-                      <td>radwa32000@gmail.com</td>-->
                     <td>
-                        <a class="nav-link" href="{{route('worker.logout')}}"
-                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
+                        <a class="nav-link link-danger" href="{{route('worker.logout')}}"
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
                         <form action="{{route('worker.logout')}}" method="post" class="d-none"
-                              id="logout-form"> @csrf</form>
+                            id="logout-form"> @csrf</form>
                     </td>
                 </tr>
                 <tr>
                 @elseif(auth())
-                    <!-- <td>Radwa samir</td>
-                      <td>radwa32000@gmail.com</td>-->
+
                     <td>
-                        <a class="nav-link" href="{{route('user.logout')}}"
-                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
+                        <a class="nav-link link-danger" href="{{route('user.logout')}}"
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
                         <form action="{{route('user.logout')}}" method="post" class="d-none"
                               id="logout-form">> @csrf</form>
@@ -98,10 +102,9 @@
                 </tr>
                     @elseif(Auth::guard('admin'))->check())
                 <tr>
-                    <!-- <td>Radwa samir</td>
-                      <td>radwa32000@gmail.com</td>-->
+
                     <td>
-                        <a class="nav-link" href="http://127.0.0.1:8000/admin/logout"
+                        <a class="nav-link link-danger" href="http://127.0.0.1:8000/admin/logout"
                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
                         <form action="http://127.0.0.1:8000/admin/logout" method="post" class="d-none"
