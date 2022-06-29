@@ -14,5 +14,9 @@ class Order extends Model
         'number of hours',
         'price for hour',
     ];
+    public function worker()
+    {
+        return $this->belongsto(Worker::class);
+    }
     
 }

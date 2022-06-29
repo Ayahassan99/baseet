@@ -13,6 +13,9 @@ class Report extends Model
         'userid',
         'workerid',
     ];
-   
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
 }

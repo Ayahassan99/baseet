@@ -8,6 +8,9 @@ use App\Http\Controllers\Worker\WorkerController;
 use App\Http\Controllers\Worker\WorderController;
 use App\Http\Controllers\User\UorderController;
 use App\Http\Controllers\Admin\CrudController;
+use App\Http\Controllers\Admin\CreatworkerController;
+use App\Http\Controllers\Admin\CreatuserController;
+
 
 
 /*
@@ -66,14 +69,15 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::view('/home','dashboard.admin.home')->name('home');
         Route::post('/logout',[AdminController::class,'logout'])->name('logout');
         Route::get('/order',[CrudController::class,'order'])->name('order');
-        Route::get('/worker',[CrudController::class,'worker'])->name('worker');
+        Route::get('/worker',[CreatworkerController::class,'worker'])->name('worker');
         Route::get('/report',[CrudController::class,'report'])->name('report');
-        Route::get('/user',[CrudController::class,'user'])->name('user');
-        Route::get('/creatuser',[CrudController::class,'creatuser'])->name('creatuser');
-        Route::get('/edituser',[CrudController::class,'edituser'])->name('edituser');
-        Route::get('/creatworker',[CrudController::class,'creatworker'])->name('creatworker');
-        Route::get('/editworker',[CrudController::class,'editworker'])->name('editworker');
-        Route::put('/update',[CrudController::class,'update'])->name('update');
+        Route::get('/user',[ CreatuserController::class,'user'])->name('user');
+        Route::get('/creatuser',[ CreatuserController::class,'creatuser'])->name('creatuser');
+        Route::get('/edituser',[ CreatuserController::class,'edituser'])->name('edituser');
+        Route::put('/update',[CreatuserController::class,'update'])->name('update');
+        Route::get('/creatworker',[CreatworkerController::class,'creatworker'])->name('creatworker');
+        Route::get('/editworker',[CreatworkerController::class,'editworker'])->name('editworker');
+        Route::put('/update',[CreatworkerController::class,'update'])->name('update');
 
 
 

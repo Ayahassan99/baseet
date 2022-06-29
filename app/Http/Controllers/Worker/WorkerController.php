@@ -14,9 +14,12 @@ class WorkerController extends Controller
     function index(Request $request, $service) {
         $city = $request->query->get('city');
         $name = $request->query->get('name');
-        $workers = Worker::where('service', $service)->where('city', $city)->where('name', 'like', "%$name%")
-            ->get();
-        return view("workers")->with(['workers'=>$workers]);
+        $query = Worker::where('service', $service);
+        $query =  $query->where('city', $city);
+        $query =  $query->where('name', 'like', "%$name%");
+        $workers = $query->get();
+        return view("workers")->with(['workers'=>$workers,'service'=>$service]);
+
     }
     function search(Request $request) {
         $name = $request->query->get('name');
@@ -37,7 +40,7 @@ class WorkerController extends Controller
              'gender'=>'required|string',
              'service'=>'required|string',
              'hour'=>'required|string',
-             'photo'=>'string',
+             'photo'=>'',
              'about'=>'required|string',
           ]);
 
