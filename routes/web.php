@@ -40,13 +40,12 @@ Route::prefix('user')->name('user.')->group(function(){
           Route::post('/create',[UserController::class,'create'])->name('create');
           Route::post('/check',[UserController::class,'check'])->name('check');
     });
-    Route::get('/profile',[UserController::class,'profile'])->name('profile');
+    Route::get('/profile/{id?}',[UserController::class,'profile'])->name('profile');
 
     Route::middleware(['auth:web','PreventBackHistory'])->group(function(){
           Route::view('/home','dashboard.user.home')->name('home');
           Route::post('/logout',[UserController::class,'logout'])->name('logout');
           Route::get('/add-new',[UserController::class,'add'])->name('add');
-          Route::get('/profile',[UserController::class,'profile'])->name('profile');
           Route::get('/edit',[UserController::class,'edit'])->name('edit');
           Route::put('/update',[UserController::class,'update'])->name('update');
           Route::get('/uorder',[UorderController::class,'uorder'])->name('uorder');
@@ -116,6 +115,7 @@ Route::prefix('worker')->name('worker.')->group(function(){
             Route::post('/create', [OrderController::class, 'create'])->name('create');
             Route::get('/list', [OrderController::class, 'index'])->name('index');
             Route::get('/{id}', [OrderController::class, 'show'])->name('show');
+            Route::patch('/{order}/update', [OrderController::class, 'update_status'])->name('update');
         });
     });
 
