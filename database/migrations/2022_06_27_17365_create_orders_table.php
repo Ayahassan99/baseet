@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatOrdersTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,10 @@ class CreatOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->float("number_of_hours");
-            $table->float("price");
+            $table->float("number_of_hours")->nullable();
+            $table->float("price")->nullable();
+            $table->string("type");
+            $table->string("status")->default("pending");
             $table->foreignId("userid")->constrained('users')->onDeleteCascade();
             $table->foreignId("workerid")->constrained('workers')->onDeleteCascade();
             $table->timestamps();

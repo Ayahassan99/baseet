@@ -8,11 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+    protected $table = 'orders';
     protected $fillable = [
         'workerid',
         'userid',
-        'number of hours',
-        'price for hour',
+        'number_of_hours',
+        'price',
+        'type',
     ];
-    
+    public function user() {
+        return $this->belongsTo(User::class, 'userid');
+    }
+    public function worker() {
+        return $this->belongsTo(Worker::class, 'workerid');
+    }
 }

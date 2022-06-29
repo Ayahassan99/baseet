@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="{{route('worker.profile')}}" class="btn plus">المزيد</a>
+                <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
             </div>
         </div>
         @endforeach

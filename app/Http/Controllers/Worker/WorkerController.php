@@ -91,7 +91,7 @@ class WorkerController extends Controller
     public function profile($id = 0)
     {
         if ($id == 0) {
-            $worker = auth()->user();
+            $worker = Auth::guard('worker')->user();
             $showMyProfile = true;
         } else {
             $worker = Worker::find($id);

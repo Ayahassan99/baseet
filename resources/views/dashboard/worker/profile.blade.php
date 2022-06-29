@@ -40,26 +40,30 @@
 
             @endif
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"> اختر طريقة الحساب التى تفضلها </h5>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col-4">
-                                <input type="radio" class="form-check-input" id="variable" name="price">
-                                <label for="variable"> الاجر/ساعه </label>
+                        <form action="{{route("user.order.create")}}" method="post">
+                            @csrf
+                            <input type="hidden" name="workerid" value="{{$user->id}}">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel"> اختر طريقة الحساب التى تفضلها </h5>
                             </div>
-                            <div class="col-4">
-                                <input type="radio" class="form-check-input" id="fixed" name="price">
-                                <label for="fixed">غير محدد</label>
+                            <div class="modal-body">
+                                <div class="col-4">
+                                    <input type="radio" class="form-check-input" id="variable" value="hourly" name="type">
+                                    <label for="variable"> الاجر/ساعه </label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="radio" class="form-check-input" id="fixed" value="undetermined" name="type">
+                                    <label for="fixed">غير محدد</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger color" data-bs-dismiss="modal">اغلاق</button>
-                            <button type="submit" class="btn btn-primary color">اطلب</button>
-                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger color" data-bs-dismiss="modal">اغلاق</button>
+                                <button type="submit" class="btn btn-primary color">اطلب</button>
+                            </div>
+                        </form>
                     </div>
 
                 </div>
@@ -76,12 +80,7 @@
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
 <div class="col-4">
-</div>
-</div>
 </div>
 <div class="card feedback">
     <div class="card-header  ">
@@ -92,28 +91,12 @@
             <p class="fs-5 fw-bold">احمد السيد</p>
             <p>شخص ملتزم فى مواعيده وشغله ممتاز </p>
         </li>
-        <li class="list-group-item">
-            <p class="fs-5 fw-bold">احمد السيد</p>
-            <p>راجل زى الفل شغله ميه ميه</p>
-        </li>
-        <li class="list-group-item">
-            <p class="fs-5 fw-bold">احمد السيد</p>
-            <p>عامل محترم شغله عظيم وفاهم فيه</p>
-        </li>
-        <li class="list-group-item">
-            <p class="fs-5 fw-bold">احمد السيد</p>
-            <p>شغله نظيف وبأعلى جودة وسعره مناسب</p>
-        </li>
-        <li class="list-group-item">
-            <p class="fs-5 fw-bold">احمد السيد</p>
-            <p>راجل زى الفل شغله ميه ميه</p>
-        </li>
     </ul>
 
 </div>
 
 
 @push('script')
-<script src="/assets/js/hours.js"></script>
+    <script src="/assets/js/hours.js"></script>
 @endpush
 @include('partials/footer')

@@ -17,7 +17,7 @@
                 @if(!$showMyProfile)
                 <a href="{{route('report')}}" class="btn btn-warning align-self-center">ابلاغ</a>
                 @else
-                <a href="{{route('user.uorder')}}" class="btn btn-info">طلباتك  </a>
+                <a href="{{route('user.order.index')}}" class="btn btn-info">طلباتك  </a>
                 <a href="{{route('user.edit')}}" class="btn btn-success"> تعديل </a>
                 @endif
             </div>

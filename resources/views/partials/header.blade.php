@@ -22,12 +22,10 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                     @if(Auth::guard('worker')->check())
                         <a class="nav-link ps-5 " href="{{route('worker.profile')}}">الملف الشخصى</a>
-                        <a class="nav-link ps-5 " href="{{route('worker.worder')}}">اعمالى </a>
-
+                        <a class="nav-link ps-5 " href="{{route('worker.order.index')}}">اعمالى </a>
                     @elseif(auth()->check())
-                    <a class="nav-link ps-5 " href="{{route('user.profile')}}">الملف الشخصى</a>
-                    <a class="nav-link ps-5 " href="{{route('user.uorder')}}">طلباتى  </a>
-
+                        <a class="nav-link ps-5 " href="{{route('user.profile')}}">الملف الشخصى</a>
+                        <a class="nav-link ps-5 " href="{{route('user.order.index')}}">طلباتى  </a>
                     @else
                     <li class="nav-item">
                         <a class="nav-link ps-5" href="{{route('worker.register')}}"> عامل جديد </a>
