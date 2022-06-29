@@ -15,8 +15,14 @@ class WorkerController extends Controller
     {
         $city = $request->query->get('city');
         $name = $request->query->get('name');
-        $workers = Worker::where('service', $service)->where('city', $city)->where('name', 'like', "%$name%")
-            ->get();
+        $workers = Worker::where('service', $service);
+        if ($city && $city !== '') {
+            $workers = $workers->where('city', $city);
+        }
+        if ($name && $name !== '') {
+            $workers = $workers->where('name', 'like', "%$name%");
+        }
+            $workers = $workers->get();
         return view("workers")->with(['workers' => $workers]);
     }
     function search(Request $request)
