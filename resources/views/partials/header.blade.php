@@ -22,6 +22,7 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                     @if(Auth::guard('worker')->check())
                         <a class="nav-link ps-5 " href="{{route('worker.profile')}}">الملف الشخصى</a>
+                        <a class="nav-link ps-5 " href="{{route('worker.worder')}}">اعمالى </a>
 
                     @elseif(auth()->check())
                     <a class="nav-link ps-5 " href="{{route('user.profile')}}">الملف الشخصى</a>
