@@ -37,6 +37,7 @@
                     <a href="{{route('worker.worder')}}" class="btn btn-primary">اعمالك </a>
                     <a href="{{route('worker.edit')}}" class="btn btn-primary"> تعديل </a>
                 </div>
+               
             @endif
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="staticBackdropLabel" aria-hidden="true">

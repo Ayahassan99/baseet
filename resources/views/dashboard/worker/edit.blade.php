@@ -60,7 +60,7 @@
 
                      <div class="col-4 mt-1 "> <label class="label extrapadding gender" for="city">الحرفة</label></div>
                      <div class="col-4 ">
-                                  <select id="mySelect" class="form-select"  onchange="change()" aria-label="Default select example" name="service" selected="{{$user['service']}}" >
+                                  <select  class="form-select"  aria-label="Default select example" name="service" selected="{{$user['service']}}" >
                                    <option  value="select" selected>اختر حرفتك</option>
                        <option  value="sbaka" >سباكة</option>
                        <option  value="negara" >نجارة</option>
@@ -85,7 +85,7 @@
                        <label class="label extrapadding gender" for="city">الاجر/ساعة</label>
                      </div>
                      <div class="col-4">
-                       <input type="number"  class="form-control"  aria-label="Default select example" name="hour" value="{{$user['hour']}}">
+                       <input type="text"  class="form-control"  aria-label="Default select example" name="hour" value="{{$user['hour']}}">
                      </div>
                      <div class="col-4 "> </div>
 
@@ -102,10 +102,10 @@
                    </div>
                    <div class="row mt-3" >
                      <div class="col-4 ">
-                       <label class="label extrapadding gender" for="city" name="about" value="{{$user['about']}}">نبذة عنك </label>
+                       <label class="label extrapadding gender" for="city" >نبذة عنك </label>
                      </div>
                      <div class="col-8">
-                       <textarea class="form-control extratext"></textarea>
+                       <textarea class="form-control extratext" name="about" value="{{$user['about']}}"></textarea>
                      </div>
 
 

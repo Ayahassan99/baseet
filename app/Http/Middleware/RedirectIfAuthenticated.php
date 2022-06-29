@@ -28,6 +28,7 @@ class RedirectIfAuthenticated
                 }
                 if($guard === 'worker'){
                     return redirect()->route('worker.home');
+                    return redirect()->route('worker.login');
 
                 }
                 return redirect('/');

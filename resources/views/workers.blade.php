@@ -8,8 +8,8 @@
 
 <select name="city" id="" class="form-select col-form-label ms-2" aria-label="Default select example" >
 <option selected>اختر المحافظه</option>
-<option value="cairo" >القاهره</option>
-<option value="alex" >الاسكندريه</option>
+<option value="cairo">القاهره</option>
+<option value="alex">الاسكندريه</option>
 <option value="portsaid">بورسعيد</option>
 <option value="behaira">البحيره</option>
 <option value="sharkia">الشرقيه</option>

@@ -1,86 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="ar" dir="rtl">
     <head>
-        <meta charset="utf-8">
-        <title>Signup Worker Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/assets/css/bootstrap.css">
         <link rel="stylesheet" href="/assets/css/reg.css">
-        <link rel="stylesheet" href="/assets/css/nav.css">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
+        <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
     </head>
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"
-                ><img class="logo" src="/assets/photos/logo.png"
-                /></a>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul
-                    class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-                    style="--bs-scroll-height: 100px"
-                >
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="loginpage.html">
-                        سجل دخولك</a
-                    >
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="signup-user.html">انشاء حساب مستخدم جديد </a>
-                    </li>
-                </ul>
-
-                <div class="dropdown m-5">
-                    <a
-                    class="btn btn-light dropdown-toggle"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >
-                    خدماتنا
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="plumber.html">سباكه</a></li>
-                    <li><a class="dropdown-item" href="carpent.html">نجاره</a></li>
-                    <li><a class="dropdown-item" href="painter.html">نقاشه</a></li>
-                    <li>
-                        <a class="dropdown-item" href="cooling.html">تبريد و تكييف</a>
-                    </li>
-                    <li><a class="dropdown-item" href="tailer.html">خياطه</a></li>
-                    <li><a class="dropdown-item" href="cleaner.html">نظافه</a></li>
-                    <li>
-                        <a class="dropdown-item" href="electrician.html">كهرباء</a>
-                    </li>
-                    <li><a class="dropdown-item" href="iron.html">حداد</a></li>
-                    <li><a class="dropdown-item" href="tile.html">تركيب بلاط</a></li>
-                    <li><a class="dropdown-item" href="nurse.html">تمريض</a></li>
-                    <li>
-                        <a class="dropdown-item" href="caring.html"
-                        >رعاية اطفال / مسنين</a
-                        >
-                    </li>
-                    <li><a class="dropdown-item" href="cook.html">طبخ</a></li>
-                    </ul>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbarScroll"></div>
-
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
-        
-                <button class="btn search " type="submit">ابحث</button>
-                </form>
-
-            </div>
-            </div>
-        </nav>
-
-
+  <body style="background:#c8e29d">
     <div class="container">
         <div class="row">
             <div class="col-3">
@@ -88,7 +19,7 @@
             </div>
             <div class="col-6 ">
             <div class="flex-container">
-                <h2 style="color: #1f4e5f;">عامل جديد</h2>
+                <h2 >عامل جديد</h2>
             <form>
                 <div class="mb-3">
                     <div class="txt">
@@ -212,14 +143,12 @@
                     <div class="row" >
                         <div class="col-2 "> </div>
                         <div class="col-8 mt-3">   
-                            <input type="submit" value="تسجيل الدخول"></div> 
+                            <input type="submit" value="اضافة عامل جديد" style="background:#c8e29d;color:black;border-color:#c8e29d"></div> 
                 <div class="col-2 "> </div>
                     </div>
                 </form>
 
 
 
-                    <script src="/assets/js/signup.js"></script>
-                    <script src="/assets/js/bootstrap.js"></script>
         
     </body>

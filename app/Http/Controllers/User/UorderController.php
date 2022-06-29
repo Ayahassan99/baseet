@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class UorderController extends Controller
 {
-    public function order(){
+    public function uorder(){
         return view ('dashboard.user.uorder');
            
     }

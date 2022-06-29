@@ -20,10 +20,15 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
-                    @if((Auth::guard('worker')) || (Auth::guard('user')))
+                    @if(Auth::guard('worker')->check())
                         <a class="nav-link ps-5 " href="{{route('worker.profile')}}">الملف الشخصى</a>
-                        <a class="nav-link ps-5" href="{{route('worker.worder')}}"> طلباتى </a>
-                    @else()
+                    
+                    @elseif(auth()->check())
+                    <a class="nav-link ps-5 " href="{{route('user.profile')}}">الملف الشخصى</a>
+                    <a class="nav-link ps-5 " href="{{route('user.edit')}}">تعديل الملف الشخصى  </a>
+                    <a class="nav-link ps-5 " href="{{route('user.uorder')}}">طلباتى  </a>
+
+                    @else
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{route('user.login')}}">
                             سجل دخولك</a>
@@ -67,36 +72,50 @@
                     </a>
 
                     <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
-                    @if(Auth::guard('worker'))
+                    @if(Auth::guard('worker')->check())
                     <tr>
                     <!-- <td>Radwa samir</td>
                       <td>radwa32000@gmail.com</td>-->
                     <td>
-                        <a class="nav-link" href="http://127.0.0.1:8000/worker/logout"
+                        <a class="nav-link" href="{{route('worker.logout')}}"
                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
-                        <form action="http://127.0.0.1:8000/worker/logout" method="post" class="d-none"
-                              id="logout-form"><input type="hidden" name="_token"
-                                                      value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
+                        <form action="{{route('worker.logout')}}" method="post" class="d-none"
+                              id="logout-form"> @csrf</form>
                     </td>
                 </tr>
-                @else
+                <tr>
+                @elseif(auth())
+                    <!-- <td>Radwa samir</td>
+                      <td>radwa32000@gmail.com</td>-->
+                    <td>
+                        <a class="nav-link" href="{{route('user.logout')}}"
+                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
+                            الخروج</a>
+                        <form action="{{route('user.logout')}}" method="post" class="d-none"
+                              id="logout-form">> @csrf</form>
+                    </td>
+                </tr>
+                    @elseif(Auth::guard('admin'))->check())
                 <tr>
                     <!-- <td>Radwa samir</td>
                       <td>radwa32000@gmail.com</td>-->
                     <td>
-                        <a class="nav-link" href="http://127.0.0.1:8000/user/logout"
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin/logout"
                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
                             الخروج</a>
-                        <form action="http://127.0.0.1:8000/user/logout" method="post" class="d-none"
+                        <form action="http://127.0.0.1:8000/admin/logout" method="post" class="d-none"
                               id="logout-form"><input type="hidden" name="_token"
                                                       value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
                     </td>
                 </tr>
-                    </ul>
-                </div>
-                @endauth
+                    @else()
+                    you must sign in first;
                 @endif
+                @endauth
+                </ul>
+
+                </div>
             </div>
         </div>
     </nav>

@@ -37,17 +37,11 @@ class CrudController extends Controller
         return view ('dashboard.admin.creatuser');
            
     }
-    public function creatworker(){
-        return view ('dashboard.admin.creatworker');
-           
-    }
+    
    
     public function edituser(){
         return view ('dashboard.admin.edituser');
            
     }
-    public function editworker(){
-        return view ('dashboard.admin.editworker');
-           
-    }
+    
 }
