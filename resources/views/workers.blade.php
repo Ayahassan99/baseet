@@ -1,18 +1,27 @@
+@push('styles')
+        <link rel="stylesheet" href="/assets/css/home.css">
+        <link rel="stylesheet" href="/assets/css/rate.css">
+@endpush
 @include("partials/header")
-<div class="container top">
+<div class="container">
+<form class="d-flex mb-5 mt-5" action="{{route('service-workers','negara')}}" method="get">
+
+<select name="city" id="" class="form-select col-form-label ms-2" aria-label="Default select example" >
+<option selected>اختر المحافظه</option>
+<option value="cairo" >القاهره</option>
+<option value="alex" >الاسكندريه</option>
+<option value="portsaid">بورسعيد</option>
+<option value="behaira">البحيره</option>
+<option value="sharkia">الشرقيه</option>
+<option value="gharbia">الغربيه</option>
+<option value="mounfia">المنوفيه</option>
+</select>
+
+<input type="text"  name="name" class="form-control ms-2" placeholder=" اكتب اسم العامل">
+
+<button type="submit" class="btn btn-info ">تصفيه</button>
+</form>
     <div class="row row-cols-1 row-cols-lg-3">
-        <form action="{{route('service-workers','negara')}}" method="get">
-            <select name="city" id="">
-                <option value="portsaid">
-                    Portsaid
-                </option>
-                <option value="alex">
-                    Alex
-                </option>
-            </select>
-            <input type="text" name="name">
-            <button type="submit">Filter</button>
-        </form>
         @foreach($workers as $worker)
         <div class="col">
             <div class="card ">
