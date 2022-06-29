@@ -46,7 +46,7 @@
                 </div>
         </div>
                 <div class="mb-3">
-                    <a href="http://127.0.0.1:8000/worker/onorder" class="btn btn-primary color">تفاصيل العمل</a>
+                    <a href="{{route('worker.onorder')}}" class="btn btn-primary color">تفاصيل العمل</a>
                 </div>
                 <div class="card-footer text-muted">
                     مدة الطلب
@@ -63,7 +63,7 @@
                 </div>
         </div>
                 <div class="mb-3">
-                    <a href="http://127.0.0.1:8000/worker/corder" class="btn btn-primary color">تفاصيل العمل</a>
+                    <a href="{{route('worker.corder')}}" class="btn btn-primary color">تفاصيل العمل</a>
                 </div>
                 <div class="card-footer text-muted">
                     مدة الطلب

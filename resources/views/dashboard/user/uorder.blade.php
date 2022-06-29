@@ -16,7 +16,7 @@
                 </div>
         </div>
                 <div class="center">
-                  <a href="h{{route('user.porder')}}" class="btn btn-primary color">تفاصيل الطلب</a>
+                  <a href="{{route('user.porder')}}" class="btn btn-primary color">تفاصيل الطلب</a>
                 </div>
                 <div class="card-footer text-muted" >
                   مدة الطلب

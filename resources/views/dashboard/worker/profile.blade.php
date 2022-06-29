@@ -30,11 +30,11 @@
                     <button type="button" class="btn btn-primary color" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop"> اطلب الان
                     </button>
-                    <a href="http://127.0.0.1:8000/report" class="btn btn-warning align-self-center">ابلاغ</a>
+                    <a href="{{route('report')}}" class="btn btn-warning align-self-center">ابلاغ</a>
                 </div>
             @else
                 <div class="card-body">
-                    <a href="{{route('worker.order')}}" class="btn btn-primary">اعمالك </a>
+                    <a href="{{route('worker.worder')}}" class="btn btn-primary">اعمالك </a>
                     <a href="{{route('worker.edit')}}" class="btn btn-primary"> تعديل </a>
                 </div>
             @endif

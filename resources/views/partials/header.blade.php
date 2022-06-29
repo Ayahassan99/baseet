@@ -20,16 +20,16 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
-                    @if(Auth::guard('worker') || Auth::guard('user'))
+                    @if((Auth::guard('worker')) || (Auth::guard('user')))
                         <a class="nav-link ps-5 " href="{{route('worker.profile')}}">الملف الشخصى</a>
-                        <a class="nav-link ps-5" href="{{route('worker.order')}}"> طلباتى </a>
+                        <a class="nav-link ps-5" href="{{route('worker.worder')}}"> طلباتى </a>
                     @else()
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="loginpage.html">
+                        <a class="nav-link" aria-current="page" href="{{route('user.login')}}">
                             سجل دخولك</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signup-user.html">مستخدم جديد</a>
+                        <a class="nav-link" href="{{route('user.register')}}">مستخدم جديد</a>
                     </li>
                     @endif
                 </ul>
@@ -67,12 +67,36 @@
                     </a>
 
                     <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
-                        <li>
-                            <button class="dropdown-item danger" href="#">تسجيل الخروج</button>
-                        </li>
+                    @if(Auth::guard('worker'))
+                    <tr>
+                    <!-- <td>Radwa samir</td>
+                      <td>radwa32000@gmail.com</td>-->
+                    <td>
+                        <a class="nav-link" href="http://127.0.0.1:8000/worker/logout"
+                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
+                            الخروج</a>
+                        <form action="http://127.0.0.1:8000/worker/logout" method="post" class="d-none"
+                              id="logout-form"><input type="hidden" name="_token"
+                                                      value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
+                    </td>
+                </tr>
+                @else
+                <tr>
+                    <!-- <td>Radwa samir</td>
+                      <td>radwa32000@gmail.com</td>-->
+                    <td>
+                        <a class="nav-link" href="http://127.0.0.1:8000/user/logout"
+                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل
+                            الخروج</a>
+                        <form action="http://127.0.0.1:8000/user/logout" method="post" class="d-none"
+                              id="logout-form"><input type="hidden" name="_token"
+                                                      value="kKfe8GMGWu8XInzI7pSFnS0Ko8jXaHJjLZgZoiYy"> @csrf</form>
+                    </td>
+                </tr>
                     </ul>
                 </div>
                 @endauth
+                @endif
             </div>
         </div>
     </nav>

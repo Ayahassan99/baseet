@@ -24,7 +24,6 @@
                     <div class="txt">
                         <input type="text" class="txt" required>
                         <label>الاسم</label>
-
                     </div>
                     <div class="txt">
                         <input type="text" class="txt" required>

@@ -34,7 +34,7 @@
         <div class="content">
         <div class="header dash">ادارة العملاء</div>
         <div class="pt-3 ">
-            <a href="signup-user.html" class="btn btn-success" > اضافة عميل جديد </a>
+            <a href="http://127.0.0.1:8000/admin/creatuser" class="btn btn-success" > اضافة عميل جديد </a>
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,6 +66,7 @@
             <th scope="col"> </th>
             </tr>
         </thead>
+        @foreach($users as $user)
 
         <tbody>
             <tr>
@@ -73,37 +74,16 @@
                 <input type="checkbox" id="checkbox1" >
                 <label for="checkbox1"></label>
             </td>
-            <td>احمد</td>
-            <td>@mail.com</td>
-            <td>0122359874</td>
-            <td>الاسكندريه</td>
-            <td>سيدى بشر</td>
-            <td><a href="user-edit.html" class="btn btn-dark">تعديل</a></td>
+            <td>{{$user['name']}}</td>
+            <td>{{$user['email']}}</td>
+            <td>{{$user['phone']}}</td>
+            <td>{{$user['city']}}</td>
+            <td>{{$user['region']}}</td>
+            <td><a href="http://127.0.0.1:8000/admin/edituser" class="btn btn-dark">تعديل</a></td>
             </tr>
-            <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1"></label>
-            </td>
-            <td>على</td>
-            <td>@mail.com</td>
-            <td>01552369</td>
-            <td>البحيره</td>
-            <td>كفرالدوار</td>
-            <td><a href="user-edit.html" class="btn btn-dark">تعديل</a></td>
-            </tr>
-
-            <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1"></label>
-            </td>
-            <td>نوره</td>
-            <td>@gmail.com</td>
-            <td>011259837</td>
-            <td>القاهره</td>
-            <td>هرم</td>
-            <td><a href="user-edit.html" class="btn btn-dark">تعديل</a></td>
+            
+           
+            @endforeach
 
         </tbody>
         </table>
