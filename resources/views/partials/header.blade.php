@@ -22,6 +22,7 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                     @if(Auth::guard('worker')->check())
                         <a class="nav-link ps-5 " href="{{route('worker.profile')}}">الملف الشخصى</a>
+                        <a class="nav-link ps-5 " href="{{route('worker.worder')}}">اعمالى </a>
 
                     @elseif(auth()->check())
                     <a class="nav-link ps-5 " href="{{route('user.profile')}}">الملف الشخصى</a>
@@ -32,7 +33,7 @@
                         <a class="nav-link ps-5" href="{{route('worker.register')}}"> عامل جديد </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ps-5" aria-current="page" href="{{route('user.login')}}">
+                        <a class="nav-link ps-5" aria-current="page" href="{{route('worker.login')}}">
                             تسجيل دخول عامل </a>
                     </li>
                     <li class="nav-item">
