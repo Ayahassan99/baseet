@@ -1,3 +1,7 @@
+@push('styles')
+    <link rel="stylesheet" href="/assets/css/home.css" >
+@endpush
+
 @include("partials/header")
 <div class="position-relative home">
     <div class="homecenter position-absolute">

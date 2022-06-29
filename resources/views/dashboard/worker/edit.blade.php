@@ -1,22 +1,12 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link rel="stylesheet" href="/assets/css/bootstrap.css">
+@push('styles')
         <link rel="stylesheet" href="/assets/css/reg.css">
-        <link rel="stylesheet" href="/assets/css/nav.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
-</head>
-<body>
-    <body>
+@endpush
+
+@include('partials/header')
           <div class="container">
             <div class="row">
               <div class="col-3">
-            
+
               </div>
               <div class="col-6 ">
                 <div class="flex-container">
@@ -64,16 +54,16 @@
                           <div class="mb-3"></div>
                             <div class="row">
                                 <div class="col-2"> </div>
-                                    <div class="col-8 "></div> 
+                                    <div class="col-8 "></div>
                                     <div class="col-2 "> </div>
-                    
+
 
                      <div class="col-4 mt-1 "> <label class="label extrapadding gender" for="city">الحرفة</label></div>
-                     <div class="col-4 ">           
+                     <div class="col-4 ">
                                   <select id="mySelect" class="form-select"  onchange="change()" aria-label="Default select example" name="service" selected="{{$user['service']}}" >
                                    <option  value="select" selected>اختر حرفتك</option>
                        <option  value="sbaka" >سباكة</option>
-                       <option  value="negara" selected>نجارة</option>
+                       <option  value="negara" >نجارة</option>
                        <option value="nasha">نقاشة</option>
                        <option value="tabreed">تبريد وتكيف</option>
                        <option value="kheta">خياطة</option>
@@ -84,59 +74,58 @@
                        <option value="tamreed">تمريض</option>
                        <option value="chelidern">جليسةاطفال/مسنين</option>
                        <option value="food">طبخ</option>
-                       <option value="other">حرفة اخرى</option>
+                    </select>
+                </div>
+                <div class="col-4 ">
+                </div>
+                    </div>
 
-
-
-                   </select> </div>    <div class="col-4 "> </div>
-                   
-                   </div>
                    <div class="row mt-3" >
                      <div class="col-4 ">
                        <label class="label extrapadding gender" for="city">الاجر/ساعة</label>
                      </div>
-                     <div class="col-4"> 
+                     <div class="col-4">
                        <input type="number"  class="form-control"  aria-label="Default select example" name="hour" value="{{$user['hour']}}">
                      </div>
                      <div class="col-4 "> </div>
-                   
+
                    </div>
                    <div class="row mt-3" >
                      <div class="col-4 ">
                        <label class="label extrapadding gender" for="city">صورة شخصية</label>
                      </div>
-                     <div class="col-4"> 
-                       <input type="file"  name="photo" id="img" name="img" accept="image/*" value="{{$user['photo']}}">                         
+                     <div class="col-4">
+                       <input type="file"  name="photo" id="img" name="img" accept="image/*" value="{{$user['photo']}}">
                      </div>
                      <div class="col-4 "> </div>
-                   
+
                    </div>
                    <div class="row mt-3" >
                      <div class="col-4 ">
                        <label class="label extrapadding gender" for="city" name="about" value="{{$user['about']}}">نبذة عنك </label>
                      </div>
-                     <div class="col-8"> 
+                     <div class="col-8">
                        <textarea class="form-control extratext"></textarea>
                      </div>
-                  
-                   
+
+
                    </div>
-                   
+
                  </div>
                  </div>
 
-               
+
                </div>
                <div class="row">
                 <div class="col-2 "> </div>
-                <div class="col-8 ">   <input  type="submit" value= "تعديل"></div> 
+                <div class="col-8 ">   <input  type="submit" value= "تعديل"></div>
              <div class="col-2 "> </div>
          </div>
-                          
-    
+
         </form>
-        <script src="/assets/js/bootstrap.js"></script>
-        <script src="/assets/js/sidemenu.js"></script>
+
+@push('script')
         <script src="/assets/js/signup.js"></script>
-</body>
-</html>
+@endpush
+
+@include('partials/footer')

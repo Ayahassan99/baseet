@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class WorderController extends Controller
 {
-    public function order(){
+    public function worder(){
         return view ('dashboard.worker.worder');
            
     }

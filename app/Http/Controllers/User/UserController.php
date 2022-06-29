@@ -55,7 +55,7 @@ class UserController extends Controller
 
     function logout(){
         Auth::guard('web')->logout();
-        return redirect('http://127.0.0.1:8000/user/login');
+        return redirect('/');
     }
     public function profile(){
         $user = auth()->user();

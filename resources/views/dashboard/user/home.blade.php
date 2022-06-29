@@ -1,12 +1,14 @@
 @push('styles')
-    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/home.css" >
 @endpush
 
 @include('partials/header')
+
     <div class="position-relative home">
       <div class="homecenter position-absolute">
         <h1>موقعك لايجاد صنايعى او مقدم خدمة بسهولة</h1>
         <h3>أنجز أعمالك بسهولة</h3>
+        <button type="button" class="btn btn-lg">سجل الان</button>
       </div>
     </div>
     <div class="container mt-4">
@@ -174,6 +176,7 @@
         </div>
       </div>
     </div>
+
 
 
     @include('partials/footer')

@@ -1,8 +1,11 @@
-
 body{
 
     font-family: 'Droid Arabic Naskh', serif;
     background: linear-gradient(90deg,#f4f7f7,#79a8a9);
+}
+
+.h2{
+    color: #1f4e5f;
 }
 
 .center{
@@ -136,6 +139,7 @@ input[type="submit"]{
 
 .worker{
     height: 36em;
+    margin-right: 650px;
 }
 
 
@@ -147,13 +151,13 @@ input[type="submit"]{
     border-radius: 39px 0px;
     direction: rtl;
     box-shadow: 4px 4px 4px #00000029;
-  }
-  .flex-container  form {
+}
+.flex-container  form {
     padding: 0 15px;
     width: 100%;
     padding-bottom: 1em;
-  }
-  .flex-container  h2{
+}
+.flex-container  h2{
     text-align: center;
     padding:  20px ;
     padding-top: 30px;
@@ -163,7 +167,7 @@ input[type="submit"]{
 
 
 .label   {
-     margin-right: 22px;
+margin-right: 22px;
 color: #1f4e5f;
 font-size: 16px;
 pointer-events: none;

@@ -1,7 +1,7 @@
 body{
       font-family: 'Droid Arabic Naskh', serif;
       background:linear-gradient(90deg,white,#f2f299) ;
-  
+
 }
 .home {
     height: 300px;
@@ -9,7 +9,7 @@ body{
     background-size: cover;
     background-position: center 48%;
     background-repeat: no-repeat;  }
-  
+
   .homecenter {
       z-index: 1;
     width: 100%;
@@ -17,7 +17,7 @@ body{
     text-align: center;
     font-size: 18px;
   }
-  
+
   .homecenter h1 ,  .homecenter h3 {
     font-weight: bold;
     font-family: "Noto Kufi Arabic", "Open Sans", sans-serif;
@@ -50,20 +50,20 @@ body{
     user-select: none;
     margin-top: 20px;
 }
-  
+
 .jobcenter {
     top: 50%;
     width: 100%;
     text-align: center;
     font-size: 18px;
   }
-  
-  .jobimg { 
+
+  .jobimg {
     width: 100%;
     height: auto;
     height: 135px;
     filter: grayscale(10%);
-    
+
   }
 
 .jobimg:hover{
@@ -93,4 +93,9 @@ h4{
 .card{
   box-shadow: 4px 4px 4px #00000029;
 
+}
+
+form
+{
+    width: 32%;
 }

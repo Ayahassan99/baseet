@@ -94,7 +94,7 @@ Route::prefix('worker')->name('worker.')->group(function(){
          Route::get('/profile/{id?}',[WorkerController::class,'profile'])->name('profile');
          Route::get('/edit',[WorkerController::class,'edit'])->name('edit');
          Route::put('/update',[WorkerController::class,'update'])->name('update');
-         Route::get('/worder',[WorderController::class,'order'])->name('order');
+         Route::get('/worder',[WorderController::class,'worder'])->name('worder');
          Route::get('/porder',[WorderController::class,'porder'])->name('porder');
          Route::get('/forder',[WorderController::class,'forder'])->name('forder');
          Route::get('/onorder',[WorderController::class,'onorder'])->name('onorder');

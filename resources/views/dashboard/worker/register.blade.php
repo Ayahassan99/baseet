@@ -1,3 +1,7 @@
+@push('styles')
+    <link rel="stylesheet" href="/assets/css/reg.css">
+@endpush
+
 @include('partials/header')
     <div class="container">
         <div class="row">
@@ -7,7 +11,7 @@
           <div class="col-6 ">
             <div class="flex-container">
                 <h2 style="color: #1f4e5f;">مستخدم جديد</h2>
-            <form action="{{ route('worker.create') }}" method="post" autocomplete="off">
+            <form action="{{ route('worker.create') }}" enctype="multipart/form-data" method="post" autocomplete="off">
             @if (Session::get('success'))
                          <div class="alert alert-success">
                              {{ Session::get('success') }}
@@ -50,8 +54,9 @@
                       <label class="label extrapadding" for="city">اختار المحافظه</label>
                       <select name="city" id="mySelect" onchange="change()"  class="form-select"  aria-label="Default select example" >
                       <span class="text-danger">@error('city'){{ $message }}@enderror</span>
+                      <option selected>اختار المحافظه</option>
                       <option  value="cairo" >القاهره</option>
-                          <option  value="alex" selected>الاسكندريه</option>
+                          <option  value="alex" >الاسكندريه</option>
                           <option value="portsaid">بورسعيد</option>
                           <option value="behaira">البحيره</option>
                           <option value="sharkia">الشرقيه</option>
@@ -86,23 +91,23 @@
 
                         <input name="gender"
                           value="male"
-                          @if(old('gender') == 'male') checked @endif type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label  for="city">ذكر</label></div>
+                          @if(old('gender') == 'male') checked @endif type="radio" class="form-check-input" id="m">
+                        <label  for="m">ذكر</label></div>
                         <div class="col-4">
                           <!-- TODO:: Change this -->
                          <input name="gender"
 
                           value="female"
                           @if(old('gender') =='female') checked @endif
-                          type="checkbox"  class="form-check-input" id="exampleCheck2"/>
-                       <label  for="city">أنثى</label></div>  </div>
+                          type="radio"  class="form-check-input" id="f"/>
+                       <label  for="f">أنثى</label></div>  </div>
                        <div class="row mt-3" >
                         <div class="col-4 mt-1 "> <label class="label extrapadding gender" for="city">الحرفة</label></div>
                         <div class="col-4 ">
                         <select name="service" class="form-select"  aria-label="Default select example" >
                          <option  value="select" selected>اختر حرفتك</option>
                           <option  value="sbaka" >سباكة</option>
-                          <option  value="negara" selected>نجارة</option>
+                          <option  value="negara" >نجارة</option>
                           <option value="nasha">نقاشة</option>
                           <option value="tabreed">تبريد وتكيف</option>
                           <option value="kheta">خياطة</option>
@@ -176,4 +181,9 @@
         </div>
 
       </div>
+
+@push('script')
+    <script src="/assets/js/signup.js"></script>
+@endpush
+
 @include('partials/footer')
