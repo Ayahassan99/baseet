@@ -7,8 +7,8 @@
     <div class="homecenter position-absolute">
         <h1>موقعك لايجاد صنايعى او مقدم خدمة بسهولة</h1>
         <h3>أنجز أعمالك بسهولة</h3>
-        @if(auth())
-        <button type="button" class="btn btn-lg">سجل الان</button>
+        @if(!Auth::guard('worker')->check() && !Auth::guard('admin')->check() && !auth()->check())
+        <a href="{{route('user.register')}}" class="btn btn-lg">سجل الان</a>
         @endif
     </div>
 </div>

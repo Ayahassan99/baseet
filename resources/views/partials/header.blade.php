@@ -32,7 +32,7 @@
                         <a class="nav-link ps-5" href="{{route('worker.register')}}"> عامل جديد </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ps-5" aria-current="page" href="{{route('user.login')}}">
+                        <a class="nav-link ps-5" aria-current="page" href="{{route('worker.login')}}">
                             تسجيل دخول عامل </a>
                     </li>
                     <li class="nav-item">
