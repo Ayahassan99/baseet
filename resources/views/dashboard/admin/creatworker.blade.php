@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
     <head>
-        <meta charset="utf-8">
-        <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="./assets/css/bootstrap.css">
-        <link rel="stylesheet" href="./assets/css/adding-form.css">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
+        <link rel="stylesheet" href="/assets/css/reg.css">
+        <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
     </head>
 
-    <body>
+  <body style="background:#c8e29d">
     <div class="container">
         <div class="row">
             <div class="col-3">
@@ -148,8 +148,8 @@
 
 
 
-                    <script src="./assets/js/signup.js"></script>
-                    <script src="./assets/js/bootstrap.js"></script>
+                    <script src="/assets/js/signup.js"></script>
+                    <script src="/assets/js/bootstrap.js"></script>
 
     </body>
 </html>

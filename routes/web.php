@@ -44,7 +44,7 @@ Route::prefix('user')->name('user.')->group(function(){
           Route::get('/profile',[UserController::class,'profile'])->name('profile');
           Route::get('/edit',[UserController::class,'edit'])->name('edit');
           Route::put('/update',[UserController::class,'update'])->name('update');
-          Route::get('/uorder',[UorderController::class,'order'])->name('order');
+          Route::get('/uorder',[UorderController::class,'uorder'])->name('uorder');
          Route::get('/porder',[UorderController::class,'porder'])->name('porder');
          Route::get('/forder',[UorderController::class,'forder'])->name('forder');
          Route::get('/onorder',[UorderController::class,'onorder'])->name('onorder');
@@ -73,6 +73,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/edituser',[CrudController::class,'edituser'])->name('edituser');
         Route::get('/creatworker',[CrudController::class,'creatworker'])->name('creatworker');
         Route::get('/editworker',[CrudController::class,'editworker'])->name('editworker');
+        Route::put('/update',[CrudController::class,'update'])->name('update');
+
 
 
     });
