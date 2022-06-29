@@ -45,6 +45,7 @@ class OrderController extends Controller
     public function show($id) {
         $order = Order::where('id', $id)->first();
         $order->username = Auth::guard("worker")->check() ? $order->user->name : $order->worker->name;
+        $order->status = $this->order_statuses[$order->status];
         return view("orders.show")->with(["order"=>$order]);
     }
 }
