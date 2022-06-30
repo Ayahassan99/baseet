@@ -38,15 +38,16 @@
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
+                                </li>
                             </div>
+                        <li class="list-group-item text-center">
+                                <a href="worker-profile.html" class="btn plus">المزيد</a>
                         </li>
                     </ul>
                 </div>
-                <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
             </div>
-        </div>
+
         @endforeach
-    </div>
-</div>
+
 
 @include("partials/footer")

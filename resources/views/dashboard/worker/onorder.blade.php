@@ -16,7 +16,7 @@
 
 
 
-            <div class="arr">
+            <div class="arr mb-3">
                 <button type="button" class="btn btn-primary color" data-bs-toggle="modal" data-bs-target="#staticBackdrop">تم انتهاء العمل </button>
             </div>
 
