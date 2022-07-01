@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Helpers\helpers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -67,10 +68,11 @@ class UserController extends Controller
         }
         return view ('dashboard.user.profile')->with([
             'user' => $user,
-            'showMyProfile' => $showMyProfile
+            'showMyProfile' => $showMyProfile,
+            'cities'=> helpers::getCitiesAsAssociative(),
         ]);
     }
-    
+
     public function edit(){
         $user = auth()->user();
         return view ('dashboard.user.edit')->with([

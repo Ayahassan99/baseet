@@ -29,6 +29,9 @@
         <li>
             <a href="{{route('admin.report')}}" class="link">التقارير</a>
         </li>
+        <li>
+            <button  class="btn btn-danger mt-5">خروج</a>
+        </li>
     </ul>
 </div>
 <div class="container">
@@ -65,13 +68,7 @@
             </div>
         </div>
 
-            <div class="content-2">
-                <div class="cart-2">
-                    <div class="box">
-                        <p class="fs-4 text-center">4932</p>
-                        <p class="fs-5 text-center">التقارير</p>
-                    </div>
-                </div>
+
 
 
         </div>

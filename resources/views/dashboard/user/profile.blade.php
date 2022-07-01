@@ -10,7 +10,7 @@
 
             <div class="col-9 padding ">
                 <h1>{{$user['name']}}</h1><br>
-                <p class="fs-3">{{$user['city']}}</p><br>
+                <p class="fs-3">{{$cities[$user->city]}}</p><br>
                 <p class="fs-3">{{$user['region']}}</p><br>
                 <p class="fs-3">{{$user['phone']}}</p><br>
 
@@ -22,23 +22,15 @@
                 @endif
             </div>
 
-            <div class="card-header  ">
-                اراء العمال
-            </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <p class="fs-5 fw-bold">احمد السيد</p>
-                  <p> شخص كويس جدا </p>
-                </li>
-                <li class="list-group-item">
-                  <p class="fs-5 fw-bold">احمد السيد</p>
-                  <p> المكان بعيد مش بيقول العنوان الحقيقي </p>
-                </li>
-                <li class="list-group-item">
-                  <p class="fs-5 fw-bold">احمد السيد</p>
-                  <p> ارشح التعامل معه </p>
-                </li>
-              </ul>
+{{--            <div class="card-header  ">--}}
+{{--                اراء العمال--}}
+{{--            </div>--}}
+{{--              <ul class="list-group list-group-flush">--}}
+{{--                <li class="list-group-item">--}}
+{{--                  <p class="fs-5 fw-bold">احمد السيد</p>--}}
+{{--                  <p> شخص كويس جدا </p>--}}
+{{--                </li>--}}
+{{--              </ul>--}}
 
 @include('partials/footer')
 

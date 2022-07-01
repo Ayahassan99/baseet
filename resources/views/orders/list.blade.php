@@ -11,7 +11,7 @@
                 <img src="/assets/photos/sabak.jpg" alt="">
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{$order->worker->name}}</h5>
+                <h5 class="card-title">{{$order->username}}</h5>
                 <p class="card-text">{{$order->service}}</p>
                 <p class="card-text">حالة الطلب : {{$order->status}} </p>
             </div>

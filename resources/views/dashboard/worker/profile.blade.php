@@ -9,14 +9,13 @@
         <div class="col-9 padding">
             <h1>{{$user['name']}} </h1><br>
             <p>{{$user['phone']}} </p><br>
-            <p>{{$user['city']}} </p><br>
+            <p>{{$cities[$user->city]}} </p><br>
             <p>{{$user['region']}}</p><br>
-            <h4>{{$user['service']}} </h4><br>
+            <h4>{{$services[$user->service]}} </h4><br>
             <p>{{$user['hour']}}</p><br>
             <p> {{$user['photo']}}</p>
             <p> {{$user['about']}}</p>
-
-            <div class="stars" data-rating="3">
+            <div class="stars" data-rating="{{$user->rating()}}">
                 <span class="star">&nbsp;</span>
                 <span class="star">&nbsp;</span>
                 <span class="star">&nbsp;</span>
@@ -87,10 +86,12 @@
         اراء العملاء
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <p class="fs-5 fw-bold">احمد السيد</p>
-            <p>شخص ملتزم فى مواعيده وشغله ممتاز </p>
-        </li>
+        @foreach($reviews as $review)
+            <li class="list-group-item">
+                <p class="fs-5 fw-bold">{{$review->order->user->name}}</p>
+                <p>{{$review->text}}</p>
+            </li>
+        @endforeach
     </ul>
 
 </div>

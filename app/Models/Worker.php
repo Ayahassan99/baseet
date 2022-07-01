@@ -54,4 +54,18 @@ class Worker extends Authenticatable
    public function orders() {
        return $this->hasMany(Order::class, 'workerid', 'id');
    }
+   public function reviews() {
+       $orders_ids = $this->orders()->where('status', '=','done')->select('id')->get()->pluck("id")->toArray();
+       return Review::whereIn("id", $orders_ids)->with('order')->get();
+   }
+   public function rating() {
+       $reviews = $this->reviews();
+       $rating_value = 0;
+       $reviews_count = $reviews->count();
+       foreach($reviews as $review) {
+           $rating_value += $review->rating;
+       }
+       return $rating_value / $reviews_count;
+
+   }
 }

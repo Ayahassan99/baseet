@@ -11,20 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CrudController extends Controller
 {
-    public function worker(){
-        $workers = Worker::all();
-        return view ('dashboard.admin.worker')->with([
-            'workers' => $workers
-        ]);
-           
-    }
-    public function user(){
-        $users = User::all();
-        return view ('dashboard.admin.user')->with([
-            'users' => $users
-        ]);
-           
-    }
+    
     public function report(){
         return view ('dashboard.admin.report');
            
@@ -33,15 +20,6 @@ class CrudController extends Controller
         return view ('dashboard.admin.order');
            
     }
-    public function creatuser(){
-        return view ('dashboard.admin.creatuser');
-           
-    }
-    
    
-    public function edituser(){
-        return view ('dashboard.admin.edituser');
-           
-    }
     
 }

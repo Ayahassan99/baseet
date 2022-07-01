@@ -66,7 +66,8 @@
                           <option value="sharkia">الشرقيه</option>
                           <option value="gharbia">الغربيه</option>
                           <option value="mounfia">المنوفيه</option>
-                      </select></div>
+                      </select>
+                          </div>
                       <div class="col" id="viewalex">
                         <label class="label extrapadding" for="city">المنطقة</label>
                         <input name="region" type="text"  class="form-control"  aria-label="Default select example">

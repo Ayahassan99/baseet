@@ -4,7 +4,7 @@
 @endpush
 @include("partials/header")
 <div class="container">
-<form class="d-flex mb-5 mt-5" action="{{route('service-workers','negara')}}" method="get">
+<form class="d-flex mb-5 mt-5" action="{{route('service-workers',$service)}}" method="get">
 
 <select name="city" id="" class="form-select col-form-label ms-2" aria-label="Default select example" >
 <option selected>اختر المحافظه</option>
@@ -30,9 +30,10 @@
                     <ul class="list-group list-group-flush align-items-center">
                         <li class="list-group-item">{{$worker->name}}</li>
                         <li class="list-group-item">{{$worker->hour}}</li>
-                        <li class="list-group-item">الاسكندريه - المندره</li>
+                        <li class="list-group-item">{{$worker->city}}</li>
+                        <li class="list-group-item">{{$worker->region}}</li>
                         <li class="list-group-item">
-                            <div class="stars" data-rating="3">
+                            <div class="stars" data-rating="{{$worker->rating()}}">
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>

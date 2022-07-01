@@ -49,4 +49,12 @@ class User extends Authenticatable
         return $this->hasMany(Order::class, 'userid', 'id');
     }
 
+    public function report()
+    {
+        return $this->hasMany(Report::class);
+    }
+    public function review()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
