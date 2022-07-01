@@ -13,7 +13,6 @@
             <p>{{$user['region']}}</p><br>
             <h4>{{$services[$user->service]}} </h4><br>
             <p>{{$user['hour']}}</p><br>
-            <p> {{$user['photo']}}</p>
             <p> {{$user['about']}}</p>
             <div class="stars" data-rating="{{$user->rating()}}">
                 <span class="star">&nbsp;</span>
@@ -73,8 +72,7 @@
         <div class="col-3 back position-relative">
 
             <div class="position-absolute  ">
-                <img src="/assets/photos/sabak.jpg" class="rounded-circle" width="200px" height="190px">
-
+                <img alt="worker profile picture" src="{{Storage::url($user->photo)}}" class="rounded-circle" width="200px" height="190px">
             </div>
         </div>
     </div>

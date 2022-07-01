@@ -36,7 +36,7 @@ class helpers
                 'value' => 'nasha',
                 'image' => '/assets/photos/593205.jpg',],
             ['label' => 'تبريد وتكييف',
-                'value' => 'tabreed ',
+                'value' => 'tabreed',
                 'image' => '/assets/photos/logo-1.jpg',],
             ['label' => 'خياطة',
                 'value' => 'kheta',
