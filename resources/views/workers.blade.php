@@ -33,7 +33,7 @@
                         <li class="list-group-item">{{$worker->city}}</li>
                         <li class="list-group-item">{{$worker->region}}</li>
                         <li class="list-group-item">
-                            <div class="stars" data-rating="3">
+                            <div class="stars" data-rating="{{$worker->rating()}}">
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>

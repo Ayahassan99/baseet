@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Helpers;
 class helpers
 {
-    public static function getServicesAsAssociative(): array {
+    public static function getServicesAsAssociative(): array
+    {
         $services = self::getServices();
         $associativeServices = [];
         foreach ($services as $service) {
@@ -10,13 +12,23 @@ class helpers
         }
         return $associativeServices;
     }
+    public static function getCitiesAsAssociative(): array
+    {
+        $cities = self::getCities();
+        $associativeCities = [];
+        foreach ($cities as $city) {
+            $associativeCities[$city['value']] = $city['label'];
+        }
+        return $associativeCities;
+    }
+
     public static function getServices(): array
     {
 
         return [
             ['label' => 'سباكة',
-            'value' => 'sebaka',
-            'image' => '/assets/photos/wrench-flexible-connector-dark-table.jpg',],
+                'value' => 'sebaka',
+                'image' => '/assets/photos/wrench-flexible-connector-dark-table.jpg',],
             ['label' => 'نجارة',
                 'value' => 'negara',
                 'image' => '/assets/photos/nagar.jpg',],
@@ -51,5 +63,33 @@ class helpers
             ['label' => 'طبخ',
                 'value' => 'food',
                 'image' => '/assets/photos/2844811.jpg',],];
+    }
+
+    public static function getCities(): array
+    {
+        return [
+            [
+                'value' => 'cairo',
+                'label' => "القاهره",
+            ],
+            [
+                'value' => 'alex',
+                'label' => "الاسكندريه"],
+            [
+                'value' => 'portsaid',
+                'label' => "بورسعيد"],
+            [
+                'value' => 'behaira',
+                'label' => "البحيره"],
+            [
+                'value' => 'sharkia',
+                'label' => "الشرقيه"],
+            [
+                'value' => 'gharbia',
+                'label' => "الغربيه"],
+            [
+                'value' => 'mounfia',
+                'label' => "المنوفيه"],
+        ];
     }
 }
