@@ -16,28 +16,30 @@
     </div>
     <ul>
         <li>
-            <a href="crud-worker.html" class="link">العاملين</a>
+            <a href="{{route('admin.worker')}}" class="link">العاملين</a>
         </li>
         <li>
-            <a href="crud-user.html" class="link">العملاء</a>
+            <a href="{{route('admin.user')}}" class="link">العملاء</a>
         </li>
         <li>
-            <a href="crud-order.html" class="link">الطلبات</a>
+            <a href="{{route('admin.order')}}" class="link">الطلبات</a>
         </li>
         <li>
-            <a href="crud-report.html" class="link">التقارير</a>
+            <a href="{{route('admin.report')}}" class="link">التقارير</a>
+        </li>
+        <li>
+            <button  class="btn btn-danger mt-5">خروج</a>
         </li>
     </ul>
 </div>
     <div class="container">
         <div class="content">
-        <div class="header dash">ادارة الطلبات</div>
+        <div class="header dash"> التقارير</div>
 
 
     <table class="table table-borded">
         <thead>
             <tr>
-            <th scope="col">#</th>
             <th scope="col">العميل</th>
             <th scope="col">العامل</th>
             <th scope="col">التاريخ</th>
@@ -49,10 +51,6 @@
 
         <tbody>
             <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1" >
-                <label for="checkbox1"></label>
-            </td>
             <td>احمد</td>
             <td>منصور</td>
             <td>17/12/2022</td>
@@ -61,10 +59,6 @@
             <td>حذف العامل</td>
             </tr>
             <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1"></label>
-            </td>
             <td>على</td>
             <td>حسن</td>
             <td>15/10/2021</td>
@@ -74,10 +68,6 @@
             </tr>
 
             <tr>
-            <td scope="row">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1"></label>
-            </td>
             <td>نوره</td>
             <td>عبدالله</td>
             <td>20/1/2019</td>

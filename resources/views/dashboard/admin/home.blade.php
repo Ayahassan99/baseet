@@ -11,23 +11,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
 </head>
 <body>
-    
+
 <div class="side-menue">
     <div class="brand-name">
         <img  src="/assets/photos/logo.png" alt="">
     </div>
     <ul>
         <li>
-            <a href="http://127.0.0.1:8000/admin/worker" class="link">العاملين</a>
+            <a href="{{route('admin.worker')}}" class="link">العاملين</a>
         </li>
         <li>
-            <a href="http://127.0.0.1:8000/admin/user" class="link">العملاء</a>
+            <a href="{{route('admin.user')}}" class="link">العملاء</a>
         </li>
         <li>
-            <a href="http://127.0.0.1:8000/admin/order" class="link">الطلبات</a>
+            <a href="{{route('admin.order')}}" class="link">الطلبات</a>
         </li>
         <li>
-            <a href="http://127.0.0.1:8000/admin/report" class="link">التقارير</a>
+            <a href="{{route('admin.report')}}" class="link">التقارير</a>
         </li>
     </ul>
 </div>
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        
+
             <div class="content-2">
                 <div class="cart-2">
                     <div class="box">
@@ -75,7 +75,7 @@
 
 
         </div>
-        
+
     </div>
 </div>
 
