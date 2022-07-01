@@ -21,10 +21,10 @@
 
 <button type="submit" class="btn btn-info ">تصفيه</button>
 </form>
-    <div class="row row-cols-1 row-cols-lg-3">
+    <div class="row row-cols-1 row-cols-lg-3 d-flex justify-content-start">
         @foreach($workers as $worker)
-        <div class="col">
-            <div class="card ">
+        <div class="col ">
+            <div class="card mb-4">
                 <div class="card-body">
                     <p class="card-text"><img src="{{Storage::url($worker->photo)}}" class="card-img-top" alt="worker profile picture"/></p>
                     <ul class="list-group list-group-flush align-items-center">
@@ -42,13 +42,19 @@
                             </div>
                                 </li>
                         <li class="list-group-item text-center">
+<<<<<<< HEAD
                                 <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
+=======
+
+                            <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
+
+>>>>>>> db40118d43a0d331dce093a239715335dbbf8156
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> </div>
 
         @endforeach
-
+</div>
 
 @include("partials/footer")
