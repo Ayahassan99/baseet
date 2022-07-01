@@ -41,7 +41,7 @@
                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="{{route("user.order.create")}}" method="post">
+                        <form action="{{route('user.order.create')}}" method="post">
                             @csrf
                             <input type="hidden" name="workerid" value="{{$user->id}}">
                             <div class="modal-header">
