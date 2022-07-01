@@ -58,6 +58,8 @@ Route::prefix('user')->name('user.')->group(function(){
             Route::post('/create', [OrderController::class, 'create'])->name('create');
             Route::get('/list', [OrderController::class, 'index'])->name('index');
             Route::get('/{id}', [OrderController::class, 'show'])->name('show');
+            Route::patch('/{order}/update', [OrderController::class, 'update_status'])->name('update');
+            Route::patch('/{order}/finish', [OrderController::class, 'finish_order'])->name('finish');
         });
     });
 

@@ -13,11 +13,12 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        
+
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->string("text");
-            $table->foreignId("orderid")->constrained('orders');      
+            $table->integer("rating");
+            $table->foreignId("orderid")->constrained('orders');
             $table->timestamps();
         });
     }

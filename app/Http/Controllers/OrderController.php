@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\helpers;
 use App\Models\Order;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -50,6 +51,19 @@ class OrderController extends Controller
     }
     public function update_status(Request $request, Order $order) {
         $order->status = $request->get('status');
+        $order->save();
+        $return_path = auth()->guard('worker')->check() ? 'worker.order.show' : 'user.order.show';
+        return redirect()->route($return_path, $order->id);
+    }
+    public function finish_order(Request $request, Order $order) {
+        $order->status = 'done';
+        $order->number_of_hours = $request->get('number_of_hours');
+        $order->price = $request->get('price');
+        $review = new Review();
+        $review->text = $request->get('review');
+        $review->rating = $request->get('rating');
+        $review->orderid = $order->id;
+        $review->save();
         $order->save();
         $return_path = auth()->guard('worker')->check() ? 'worker.order.show' : 'user.order.show';
         return redirect()->route($return_path, $order->id);

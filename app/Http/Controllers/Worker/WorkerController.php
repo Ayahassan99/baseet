@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Worker;
 
 use App\Http\Controllers\Controller;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use App\Models\Worker;
 use Illuminate\Support\Facades\Auth;
@@ -81,7 +82,7 @@ class WorkerController extends Controller
         ]);
 
         $creds = $request->only('email', 'password');
-        if (Auth::guard('worker')->attempt($creds, 1)) {
+        if (Auth::guard('worker')->attempt($creds)) {
             return redirect('/');
         } else {
             return redirect()->route('worker.login')->with('fail', 'Incorrect Credentials');
@@ -102,9 +103,11 @@ class WorkerController extends Controller
             $worker = Worker::find($id);
             $showMyProfile = false;
         }
+        $reviews = $worker->reviews();
         return view('dashboard.worker.profile')->with([
             'user' => $worker,
-            'showMyProfile' => $showMyProfile
+            'showMyProfile' => $showMyProfile,
+            'reviews' => $reviews,
         ]);
     }
     public function edit()

@@ -24,32 +24,48 @@
         <div class="arr">
             <button type="button" class="btn btn-primary color" data-bs-toggle="modal" data-bs-target="#staticBackdrop">تم انتهاء العمل </button>
         </div>
-
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">من فضلك قم بادخال عدد ساعات العمل</h5>
-                    </div>
-                    <div class="modal-body">
-                        <input type="number" placeholder="اكتب هنا" required>
-                    </div>
+        <form action="{{route('user.order.finish', $order->id)}}" method="post">
+            @csrf
+            @method("PATCH")
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">شارك تجربتك رايك يهمنا !</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">من فضلك قم بادخال عدد ساعات العمل</h5>
                         </div>
                         <div class="modal-body">
-                            <textarea class="form-control extratext" required placeholder="Feedback"></textarea>
+                            <input min="1" name="number_of_hours" type="number" placeholder="اكتب هنا" required>
                         </div>
-                    </div>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">من فضلك قم بادخال المبلغ الكلي للطلب</h5>
+                        </div>
+                        <div class="modal-body">
+                            <input min="1" name="price" type="number" placeholder="اكتب هنا" required>
+                        </div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">شارك تجربتك رايك يهمنا !</h5>
+                            </div>
+                            <div class="modal-body">
+                                <textarea name="review" class="form-control extratext" required placeholder="Feedback"></textarea>
+                            </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">تقييم العامل</h5>
+                            </div>
+                            <div class="modal-body">
+                                <input name="rating" type="number" min="1" max="5" class="form-control" required placeholder="*"/>
+                                <p class="small">القيمة أقل من 1 تحتسب 1، القيمة أكبر من 5 تحتسب 5</p>
+                            </div>
+                        </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger " data-bs-dismiss="modal">اغلاق</button>
-                        <button type="submit" class="btn btn-primary color">حفظ</button>
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-danger " data-bs-dismiss="modal">اغلاق</button>
+                            <button type="submit" class="btn btn-primary color">حفظ</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     @endif
     @if($order->status == 'pending' && auth()->guard('worker')->check())
         <div class="d-flex justify-content-around">
@@ -67,6 +83,19 @@
                     @method("PATCH")
                     <input type="hidden" name="status" value="canceled">
                     <button type="submit" class="btn btn-primary color">رفض الطلب</button>
+                </form>
+            </div>
+        </div>
+    @endif
+
+    @if($order->status == 'pending' && auth()->check())
+        <div class="d-flex justify-content-around">
+            <div class="space">
+                <form method="post" action="{{route('user.order.update', $order->id)}}">
+                    @csrf
+                    @method("PATCH")
+                    <input type="hidden" name="status" value="canceled">
+                    <button type="submit" class="btn btn-primary color">الغاء الطلب</button>
                 </form>
             </div>
         </div>

@@ -10,10 +10,11 @@ class Review extends Model
     use HasFactory;
     protected $fillable = [
         'text',
-        'userid',
+        'orderid',
+        'rating',
     ];
-    public function user()
+    public function order()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Order::class, 'orderid', 'id')->with('user');
     }
 }
