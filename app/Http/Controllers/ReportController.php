@@ -13,8 +13,10 @@ class ReportController extends Controller
     public function savereport(Request $request)
     {
         DB::table('reports')->insert([
-            'text'=>$request->text
-            'userid'=>$request->userid
+            'text'=>$request->text,
+            'userid',
+            'workerid'=>$request->workerid
+
         ]);
         return back()-with('report','نعتذر عن المشكلة التى واجهتك تم استقبال مشكلتك وسيتم التعامل معها');
     }

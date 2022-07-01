@@ -42,11 +42,7 @@
                             </div>
                                 </li>
                         <li class="list-group-item text-center">
-<<<<<<< HEAD
-                                <a href="{{ route('worker.profile') }}" class="btn plus">المزيد</a>
-=======
-                                <a href="{{route("worker.profile", $worker->id)}}" class="btn plus">المزيد</a>
->>>>>>> fb28c373e4dfcb033033a0ea2d1c1c0b5ccdf009
+                                <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
                         </li>
                     </ul>
                 </div>

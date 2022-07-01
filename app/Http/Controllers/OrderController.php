@@ -21,7 +21,7 @@ class OrderController extends Controller
         $newOrder = $request->all();
         $newOrder['userid'] = auth()->user()->id;
         Order::create($newOrder);
-        return redirect()->route("user.orders.index");
+        return redirect()->route("user.order.index");
     }
     public function index() {
         $userId = Auth::guard("worker")->check() ? Auth::guard("worker")->user()->id : auth()->user()->id;

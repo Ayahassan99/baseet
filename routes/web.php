@@ -29,8 +29,8 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 Auth::routes();
 Route::get('workers/{service}', [App\Http\Controllers\Worker\WorkerController::class, 'index'])->name('service-workers');//->middleware(['auth:web']);
-Route::get('/report', [App\Http\Controllers\ReportController::class, 'report'])->name('report');
-Route::post('/report', [App\Http\Controllers\ReportController::class, 'savereport'])->name('save.report');
+Route::get('report', [App\Http\Controllers\ReportController::class, 'report'])->name('report');
+Route::post('report', [App\Http\Controllers\ReportController::class, 'savereport'])->name('save.report');
 
 Route::prefix('user')->name('user.')->group(function(){
 
@@ -80,11 +80,15 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/report',[CrudController::class,'report'])->name('report');
         Route::get('/user',[ CreatuserController::class,'user'])->name('user');
         Route::get('/creatuser',[ CreatuserController::class,'creatuser'])->name('creatuser');
-        Route::get('/edituser',[ CreatuserController::class,'edituser'])->name('edituser');
+        Route::get('/edit',[ CreatuserController::class,'edit'])->name('edit');
         Route::put('/update',[CreatuserController::class,'update'])->name('update');
         Route::get('/creatworker',[CreatworkerController::class,'creatworker'])->name('creatworker');
-        Route::get('/editworker/{id}',[CreatworkerController::class,'editworker'])->name('editworker');
+        Route::get('/edit/{id}',[CreatworkerController::class,'edit'])->name('edit');
         Route::put('/update',[CreatworkerController::class,'update'])->name('update');
+        Route::get('/delete{id}',[CreatworkerController::class,'delete'])->name('delete');
+        Route::get('/delete{id}',[CreatuserController::class,'delete'])->name('delete');
+
+
 
 
 

@@ -18,7 +18,7 @@
     <div class="d-flex flex-column mb-3 write text-center">
         <h1 >اكتب مشكلتك</h1>
     </div>
-
+     <input type="hidden" name="workerid" value="{{$worker->id}}">
     <textarea  name="text" cols="60" rows="10" style="margin-right: 35%;"></textarea>
 
     <button type="submit" value="submit" class="btn btn-secondary btn-lg" >ارسال</button>

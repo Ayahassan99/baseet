@@ -13,7 +13,7 @@
 <body>
     <div class="side-menue">
         <div class="brand-name">
-            <img src="./assets/photos/logo.png" alt="">
+            <img src="/assets/photos/logo.png" alt="">
         </div>
         <ul>
         <li>
@@ -76,7 +76,7 @@
                         <td>{{$worker['hour']}}</td>
                         <td>{{$worker['photo']}}</td>
                         <td>{{$worker['about']}}</td>
-                        <td><a href="{{route('admin.editworker')}}" class="btn btn-dark">تعديل</a></td>
+                        <td><a href="{{route('admin.edit',$worker->id)}}" class="btn btn-dark">تعديل</a></td>
                         <td>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -87,7 +87,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">الغاء</button>
-                <button type="button" class="btn btn-success">تاكيد </button>
+                <a  href="{{route('admin.delete',$worker->id)}}" class="btn btn-success">تاكيد </a>
             </div>
         </div>
     </div>

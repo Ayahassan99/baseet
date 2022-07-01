@@ -8,6 +8,8 @@ use App\Models\Admin;
 use App\Models\Worker;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Worker\updateprofilerequest;
+use DB;
+
 
 
 class CreatworkerController extends Controller
@@ -23,13 +25,34 @@ class CreatworkerController extends Controller
         return view ('dashboard.admin.creatworker');
            
     }
-    public function editworker($id){
+    public function edit($id){
         $worker = Worker::where('id', $id)->first();
-        return view('dashboard.admin.editworker')->with([
+        return view('dashboard.admin.edit')->with([
             'user' => $worker
 
         ]);
            
+    }
+    public function update(updateprofilerequest $request)
+    {
+        $worker = auth()->user();
+        $worker->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            // 'password'=>$request->password,
+            'city' => $request->city,
+            'region' => $request->region,
+            'service' => $request->service,
+            'hour' => $request->hour,
+            'photo' => $request->photo,
+            'about' => $request->about,
+
+
+        ]);
+
+        return redirect('http://127.0.0.1:8000/admin/worker');
+
     }
     function create(Request $request){
         //Validate inputs
@@ -68,28 +91,13 @@ class CreatworkerController extends Controller
           return redirect()->back()->with('fail', 'Something went Wrong, failed to register');
       }
   }
-    public function update(updateprofilerequest $request)
-    {
-        $worker = auth()->user();
-        $worker->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            // 'password'=>$request->password,
-            'city' => $request->city,
-            'region' => $request->region,
-            'service' => $request->service,
-            'hour' => $request->hour,
-            'photo' => $request->photo,
-            'about' => $request->about,
-            $save = $worker->save(),
-
-
-        ]);
-
-        return redirect()->back()->with('update');
-
-    }
+  function delete($id){
+    $delete = DB::table('workers')
+    ->where('id',$id)
+    ->delete();
+    return redirect('admin/worker');
+  }
+    
     
 }
 

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Admin;
+use DB;
+
 class CreatuserController extends Controller
 {
     public function user(){
@@ -52,5 +54,11 @@ class CreatuserController extends Controller
         return view ('dashboard.admin.edituser');
            
     }
+    function delete($id){
+        $delete = DB::table('users')
+        ->where('id',$id)
+        ->delete();
+        return redirect('admin/user');
+      }
     
 }
