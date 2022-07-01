@@ -26,7 +26,7 @@
         <div class="col">
             <div class="card ">
                 <div class="card-body">
-                    <p class="card-text"><img src="./assets/photos/sabak.jpg" class="card-img-top" alt="..."></p>
+                    <p class="card-text"><img src="{{Storage::url($worker->photo)}}" class="card-img-top" alt="worker profile picture"/></p>
                     <ul class="list-group list-group-flush align-items-center">
                         <li class="list-group-item">{{$worker->name}}</li>
                         <li class="list-group-item">{{$worker->hour}}</li>
@@ -39,10 +39,14 @@
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
-                                </li>
                             </div>
+                                </li>
                         <li class="list-group-item text-center">
+<<<<<<< HEAD
                                 <a href="{{ route('worker.profile') }}" class="btn plus">المزيد</a>
+=======
+                                <a href="{{route("worker.profile", $worker->id)}}" class="btn plus">المزيد</a>
+>>>>>>> fb28c373e4dfcb033033a0ea2d1c1c0b5ccdf009
                         </li>
                     </ul>
                 </div>
