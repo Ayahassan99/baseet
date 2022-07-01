@@ -23,7 +23,7 @@ class CreateWorkersTable extends Migration
             $table->enum('city', ['cairo','alex','portsaid','behaira','sharkia','gharbia','mounfia']);
             $table->string('region');
             $table->enum('gender', ['male','female']);
-            $table->enum('service',['sbaka','negara','nasha','tabreed ','kheta','nazafa','kahrba','hada','balat','tamreed','chelidern','food','other']);
+            $table->enum('service',['sbaka','negara','nasha','tabreed','kheta','nazafa','kahrba','hada','balat','tamreed','chelidern','food','other']);
             $table->string('hour');
             $table->string('photo') ->nullable();
             $table->string('about');
