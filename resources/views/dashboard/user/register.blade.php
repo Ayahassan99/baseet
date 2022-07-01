@@ -11,7 +11,7 @@
           <div class="col-6 ">
             <div class="flex-container">
                 <h2 class="h2">عميل جديد </h2>
-            <form action="{{ route('user.create') }}" method="post" autocomplete="off" >
+            <form action="{{ route('user.create') }}" enctype="multipart/form-data" method="post" autocomplete="off" >
             @if (Session::get('success'))
                          <div class="alert alert-success">
                              {{ Session::get('success') }}

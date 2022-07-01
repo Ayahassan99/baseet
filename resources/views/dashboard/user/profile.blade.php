@@ -21,6 +21,8 @@
                 <a href="{{route('user.edit')}}" class="btn btn-success"> تعديل </a>
                 @endif
             </div>
+          </div>
+        </div>
 
 {{--            <div class="card-header  ">--}}
 {{--                اراء العمال--}}
