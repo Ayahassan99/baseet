@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Worker;
 
+use App\Helpers\helpers;
 use App\Http\Controllers\Controller;
 use App\Models\Review;
 use Illuminate\Http\Request;
@@ -24,7 +25,7 @@ class WorkerController extends Controller
             $workers = $workers->where('name', 'like', "%$name%");
         }
             $workers = $workers->get();
-        return view("workers")->with(['workers' => $workers]);
+        return view("workers")->with(['workers' => $workers, 'service' => $service]);
     }
     function search(Request $request)
     {
@@ -108,6 +109,8 @@ class WorkerController extends Controller
             'user' => $worker,
             'showMyProfile' => $showMyProfile,
             'reviews' => $reviews,
+            'services'=> helpers::getServicesAsAssociative(),
+            'cities'=> helpers::getCitiesAsAssociative(),
         ]);
     }
     public function edit()

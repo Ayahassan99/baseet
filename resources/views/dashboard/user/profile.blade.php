@@ -10,7 +10,7 @@
 
             <div class="col-9 padding ">
                 <h1>{{$user['name']}}</h1><br>
-                <p class="fs-3">{{$user['city']}}</p><br>
+                <p class="fs-3">{{$cities[$user->city]}}</p><br>
                 <p class="fs-3">{{$user['region']}}</p><br>
                 <p class="fs-3">{{$user['phone']}}</p><br>
 

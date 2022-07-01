@@ -9,9 +9,9 @@
         <div class="col-9 padding">
             <h1>{{$user['name']}} </h1><br>
             <p>{{$user['phone']}} </p><br>
-            <p>{{$user['city']}} </p><br>
+            <p>{{$cities[$user->city]}} </p><br>
             <p>{{$user['region']}}</p><br>
-            <h4>{{$user['service']}} </h4><br>
+            <h4>{{$services[$user->service]}} </h4><br>
             <p>{{$user['hour']}}</p><br>
             <p> {{$user['photo']}}</p>
             <p> {{$user['about']}}</p>
