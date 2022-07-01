@@ -26,7 +26,7 @@
         <div class="col">
             <div class="card ">
                 <div class="card-body">
-                    <p class="card-text"><img src="./assets/photos/sabak.jpg" class="card-img-top" alt="..."></p>
+                    <p class="card-text"><img src="{{Storage::url($worker->photo)}}" class="card-img-top" alt="worker profile picture"/></p>
                     <ul class="list-group list-group-flush align-items-center">
                         <li class="list-group-item">{{$worker->name}}</li>
                         <li class="list-group-item">{{$worker->hour}}</li>
