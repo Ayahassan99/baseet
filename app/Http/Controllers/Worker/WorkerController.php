@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Worker;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Worker\updateprofilerequest;
+use Illuminate\Support\Facades\Storage;
 
 class WorkerController extends Controller
 {
@@ -47,10 +48,10 @@ class WorkerController extends Controller
             'gender' => 'required|string',
             'service' => 'required|string',
             'hour' => 'required|string',
-            'photo' => '',
+            'photo' => 'required|image',
             'about' => 'required|string',
         ]);
-
+        $photo = $request->file('photo')->store('public');
         $worker = new Worker();
         $worker->name = $request->name;
         $worker->email = $request->email;
@@ -61,7 +62,7 @@ class WorkerController extends Controller
         $worker->gender = $request->gender;
         $worker->service = $request->service;
         $worker->hour = $request->hour;
-        $worker->photo = $request->photo;
+        $worker->photo = $photo;
         $worker->about = $request->about;
         $save = $worker->save();
 
@@ -122,17 +123,19 @@ class WorkerController extends Controller
     }
     public function update(updateprofilerequest $request)
     {
-        $worker = auth()->user();
+        $worker = auth()->guard('worker')->user();
+        Storage::delete($worker->photo);
+        $photo = $request->file('photo')->store('public');
+//        dd($request->all());
         $worker->update([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            // 'password'=>$request->password,
             'city' => $request->city,
             'region' => $request->region,
             'service' => $request->service,
             'hour' => $request->hour,
-            'photo' => $request->photo,
+            'photo' => $photo,
             'about' => $request->about,
 
         ]);

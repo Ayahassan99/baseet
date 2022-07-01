@@ -105,7 +105,7 @@
                         <div class="col-4 mt-1 "> <label class="label extrapadding gender" for="city">الحرفة</label></div>
                         <div class="col-4 ">
                         <select name="service" class="form-select"  aria-label="Default select example" >
-                         <option  value="select" selected>اختر حرفتك</option>
+                         <option  value="" selected>اختر حرفتك</option>
                           <option  value="sbaka" >سباكة</option>
                           <option  value="negara" >نجارة</option>
                           <option value="nasha">نقاشة</option>

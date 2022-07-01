@@ -62,6 +62,9 @@ class Worker extends Authenticatable
        $reviews = $this->reviews();
        $rating_value = 0;
        $reviews_count = $reviews->count();
+       if ($reviews_count === 0) {
+           return 0;
+       }
        foreach($reviews as $review) {
            $rating_value += $review->rating;
        }
