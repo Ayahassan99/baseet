@@ -87,7 +87,7 @@ class CreatworkerController extends Controller
 
         ]);
 
-        return redirect()->route("admin.worker");
+        return redirect()->back()->with('update');
 
     }
     
