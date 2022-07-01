@@ -42,7 +42,9 @@
                             </div>
                                 </li>
                         <li class="list-group-item text-center">
-                                <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
+
+                            <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
+
                         </li>
                     </ul>
                 </div>

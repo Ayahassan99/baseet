@@ -7,14 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/reg.css">
-    <link rel="stylesheet" href="/assets/css/nav.css">
-
+    <link rel="stylesheet" href="/assets/css/reg.css"></link>
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
 </head>
 
 <body>
-
 
     <div class="container">
 <div class="row">
