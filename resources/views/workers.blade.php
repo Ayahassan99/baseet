@@ -21,12 +21,12 @@
 
 <button type="submit" class="btn btn-info ">تصفيه</button>
 </form>
-    <div class="row row-cols-1 row-cols-lg-3">
+    <div class="row row-cols-1 row-cols-lg-3 ">
         @foreach($workers as $worker)
-        <div class="col">
+        <div class="col ">
             <div class="card ">
                 <div class="card-body">
-                    <p class="card-text"><img src="./assets/photos/sabak.jpg" class="card-img-top" alt="..."></p>
+                    <p class="card-text"><img src="{{Storage::url($worker->photo)}}" class="card-img-top" alt="worker profile picture"/></p>
                     <ul class="list-group list-group-flush align-items-center">
                         <li class="list-group-item">{{$worker->name}}</li>
                         <li class="list-group-item">{{$worker->hour}}</li>
@@ -39,14 +39,16 @@
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
-                                </li>
                             </div>
+                                </li>
                         <li class="list-group-item text-center">
-                                <a href="{{ route('worker.profile') }}"class="btn plus">المزيد</a>
+                                <a href="{{route('worker.profile', $worker->id)}}" class="btn plus">المزيد</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <br>
+
 
         @endforeach
 
