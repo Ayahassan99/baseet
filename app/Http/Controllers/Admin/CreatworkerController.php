@@ -27,6 +27,7 @@ class CreatworkerController extends Controller
         $worker = Worker::where('id', $id)->first();
         return view('dashboard.admin.editworker')->with([
             'user' => $worker
+
         ]);
            
     }
@@ -81,6 +82,8 @@ class CreatworkerController extends Controller
             'hour' => $request->hour,
             'photo' => $request->photo,
             'about' => $request->about,
+            $save = $worker->save(),
+
 
         ]);
 
