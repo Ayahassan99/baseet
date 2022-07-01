@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\Worker;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Worker\updateprofilerequest;
+
 
 class CreatworkerController extends Controller
 {
@@ -65,14 +67,6 @@ class CreatworkerController extends Controller
           return redirect()->back()->with('fail', 'Something went Wrong, failed to register');
       }
   }
-
-  public function edit($id)
-    {
-        $worker = Worker::where('id', $id)->first();
-        return view('dashboard.admin.editworker')->with([
-            'user' => $worker
-        ]);
-    }
     public function update(updateprofilerequest $request)
     {
         $worker = auth()->user();
