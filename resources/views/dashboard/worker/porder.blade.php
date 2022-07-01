@@ -15,10 +15,10 @@
             </div>
     </div>
         <div class="d-flex justify-content-around">
-            <div class="space">
+            <div class="mb-3">
                 <button type="button" class="btn btn-primary color">قبول الطلب</button>
             </div>
-            <div class="space">
+            <div class="mb-3">
                 <button type="button" class="btn btn-primary color">رفض الطلب</button>
             </div>
         </div>

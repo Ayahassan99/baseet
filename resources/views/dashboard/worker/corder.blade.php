@@ -3,10 +3,6 @@
 @endpush
 
 @include('partials/header')
-    <div class="col-6">
-        <div class="flex-container"></div>
-            <h2 class="text-center col-6 fw-blod" >تفاصيل الطلب</h2>
-            </div>
 
     <div class="card text-center">
         <div class="d-flex">

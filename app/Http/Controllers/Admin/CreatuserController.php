@@ -19,6 +19,33 @@ class CreatuserController extends Controller
         return view ('dashboard.admin.creatuser');
            
     }
+
+    function create(Request $request){
+        //Validate Inputs
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required|email|unique:users,email',
+            'password'=>'required|min:5|max:30',
+            'cpassword'=>'required|min:5|max:30|same:password',
+            'phone'=>'required|string',
+             'city'=>'required|string',
+             'region'=>'required|string',
+        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = \Hash::make($request->password);
+        $user->phone = $request->phone;
+          $user->city = $request->city;
+          $user->region = $request->region;
+        $save = $user->save();
+
+        if( $save ){
+            return redirect()->back()->with('success','You are now registered successfully');
+        }else{
+            return redirect()->back()->with('fail','Something went wrong, failed to register');
+        }
+    }
     
    
     public function edituser(){
