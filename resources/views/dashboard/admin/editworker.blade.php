@@ -18,7 +18,7 @@
               <div class="col-6 ">
                 <div class="flex-container">
                     <h2 style="color: #1f4e5f;">تعديل البيانات الشخصيه </h2>
-                <form action="{{ route('worker.update')}}" method="Post">
+                <form action="{{ route('admin.update')}}" method="Post">
                 @csrf
                   @method('PUT')
                     <div class="mb-3">
