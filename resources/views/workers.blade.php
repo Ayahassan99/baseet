@@ -39,10 +39,10 @@
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
                                 <span class="star">&nbsp;</span>
-                                </li>
                             </div>
+                                </li>
                         <li class="list-group-item text-center">
-                                <a href="worker-profile.html" class="btn plus">المزيد</a>
+                                <a href="{{route("worker.profile", $worker->id)}}" class="btn plus">المزيد</a>
                         </li>
                     </ul>
                 </div>
