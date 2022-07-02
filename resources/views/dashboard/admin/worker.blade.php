@@ -78,15 +78,15 @@
                         <td>{{$worker['about']}}</td>
                         <td><a href="{{route('admin.edit',$worker->id)}}" class="btn btn-dark">تعديل</a></td>
                         <td>
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target={{"Modal".$worker->id}}>حذف</button>
+                        <div class="modal fade" id={{"Modal".$worker->id}} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body fs-5">
                 تاكيد حذف المحدد؟
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">الغاء</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss={{"Modal".$worker->id}}>الغاء</button>
                 <a  href="{{route('admin.delete',$worker->id)}}" class="btn btn-success">تاكيد </a>
             </div>
         </div>

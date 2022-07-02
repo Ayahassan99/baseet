@@ -92,8 +92,8 @@ class CreatworkerController extends Controller
       }
   }
   function delete($id){
+    $worker = Worker::where('id', $id)->first();
     $delete = DB::table('workers')
-    ->where('id',$id)
     ->delete();
     return redirect('admin/worker');
   }

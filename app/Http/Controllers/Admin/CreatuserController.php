@@ -55,7 +55,7 @@ class CreatuserController extends Controller
            
     }
     function delete($id){
-        $delete = DB::table('users')
+        $delete = DB::table('users->$id')
         ->where('id',$id)
         ->delete();
         return redirect('admin/user');

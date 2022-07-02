@@ -85,8 +85,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('/creatworker',[CreatworkerController::class,'creatworker'])->name('creatworker');
         Route::get('/edit/{id}',[CreatworkerController::class,'edit'])->name('edit');
         Route::put('/update',[CreatworkerController::class,'update'])->name('update');
-        Route::get('/delete{id}',[CreatworkerController::class,'delete'])->name('delete');
-        Route::get('/delete{id}',[CreatuserController::class,'delete'])->name('delete');
+        Route::get('/delete/{id}',[CreatworkerController::class,'delete'])->name('delete');
+       // Route::get('/delete/{id}',[CreatuserController::class,'delete'])->name('delete');
 
 
 

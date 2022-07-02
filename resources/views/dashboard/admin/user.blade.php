@@ -60,7 +60,6 @@
             <td>{{$user['phone']}}</td>
             <td>{{$user['city']}}</td>
             <td>{{$user['region']}}</td>
-            <td><a href="" class="btn btn-dark">تعديل</a></td>
             <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -70,7 +69,7 @@
                                 </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">الغاء</button>
-                                <a  href="{{route('admin.delete',$user->id)}}" class="btn btn-success">تاكيد </a>
+                                <a  href="{{route('admin.delete' ,$user->id)}}" class="btn btn-success">تاكيد </a>
                             </div>
                         </div>
                         </div>

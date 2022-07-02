@@ -6,7 +6,7 @@
 <div class="card text-center">
     <div class="d-flex">
         <div class="photo">
-            <img src="/assets/photos/sabak.jpg" alt="">
+            <img src="{{Storage::url($order->worker->photo)}}" alt="">
         </div>
         <div class="card-body">
             <h5 class="card-title">{{$order->username}}</h5>
