@@ -28,9 +28,12 @@
         <li>
             <a href="{{route('admin.report')}}" class="link">التقارير</a>
         </li>
-        <li>
-            <button  class="btn btn-danger mt-5">خروج</a>
-        </li>
+        <td>
+         <a  button  class="btn btn-danger mt-5" class="nav-link link-danger" href="{{route('admin.logout')}}"
+         onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل الخروج</a>
+        <form action="{{route('admin.logout')}}" method="post" class="d-none"
+         id="logout-form"> @csrf</form>
+</td>
     </ul>
 </div>
     <div class="container">
@@ -48,41 +51,29 @@
             <th scope="col">مدة العمل</th>
             <th scope="col">التكلفه</th>
             <th scope="col">حالة الطلب</th>
-            <th scope="col"> تعديل حالة الطلب</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-            <td>احمد</td>
-            <td>منصور</td>
-            <td>17/12/2022</td>
-            <td>12:25</td>
+            <td>أميرة احمد على</td>
+            <td>محمد أحمد عوض</td>
+            <td>7/2/2022</td>
+            <td>6:25</td>
             <td></td>
             <td></td>
-            <td>معلق</td>
-            <td><a href="order-worker-pending.html" class="btn btn-dark">تعديل</a></td>
-            </tr>
-
-            <td>على</td>
-            <td>حسن</td>
-            <td>15/10/2021</td>
-            <td>21:12</td>
-            <td>5</td>
-            <td>400</td>
             <td>تم بنجاح</td>
-            <td><a href="order-user-finish.html" class="btn btn-dark">تعديل</a></td>
-            </tr>
+</tr>
 
-            <tr>
-            <td>نوره</td>
-            <td>عبدالله</td>
-            <td>20/1/2019</td>
-            <td>1:35</td>
+<tr>
+            <td>أميرة احمد على</td>
+            <td>محمد أحمد عوض</td>
+            <td>7/2/2022</td>
+            <td>6:25</td>
             <td></td>
             <td></td>
-            <td>قيد العمل</td>
-            <td><a href="order-user-ongoing.html" class="btn btn-dark">تعديل</a></td>
+            <td>تم الالغاء</td>
+</tr>
 
         </tbody>
         </table>

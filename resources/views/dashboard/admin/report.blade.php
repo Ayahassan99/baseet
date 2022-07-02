@@ -27,9 +27,12 @@
         <li>
             <a href="{{route('admin.report')}}" class="link">التقارير</a>
         </li>
-        <li>
-            <button  class="btn btn-danger mt-5">خروج</a>
-        </li>
+        <td>
+         <a  button  class="btn btn-danger mt-5" class="nav-link link-danger" href="{{route('admin.logout')}}"
+         onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل الخروج</a>
+        <form action="{{route('admin.logout')}}" method="post" class="d-none"
+         id="logout-form"> @csrf</form>
+</td>
     </ul>
 </div>
     <div class="container">
@@ -51,30 +54,23 @@
 
         <tbody>
             <tr>
-            <td>احمد</td>
-            <td>منصور</td>
+            <td>أميرة احمد على</td>
+            <td>محمد أحمد عوض</td>
             <td>17/12/2022</td>
             <td>12:25</td>
             <td>اسلوب سئ فالتعامل</td>
             <td>حذف العامل</td>
             </tr>
             <tr>
-            <td>على</td>
-            <td>حسن</td>
-            <td>15/10/2021</td>
-            <td>21:12</td>
-            <td>شغل سئ جدا </td>
-            <td>حذف العامل</td>
-            </tr>
-
             <tr>
-            <td>نوره</td>
-            <td>عبدالله</td>
-            <td>20/1/2019</td>
-            <td>1:35</td>
-            <td>حراااامي و قليل الزوق</td>
-            <td>حذف العامل</td>
+            <td>أحمد محمد</td>
+            <td>محمد أحمد عوض</td>
+            <td>17/12/2022</td>
+            <td>12:25</td>
+            <td>اسلوب محترم مواعيد مظبوطة وسعر مناسب</td>
             </tr>
+            <tr>
+           
 
 
         </tbody>

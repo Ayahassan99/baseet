@@ -86,7 +86,8 @@ class CreatworkerController extends Controller
       $save = $worker->save();
 
       if ($save) {
-          return redirect('admin/worker');
+        return redirect()->back('admin/worker');
+
       } else {
           return redirect()->back()->with('fail', 'Something went Wrong, failed to register');
       }

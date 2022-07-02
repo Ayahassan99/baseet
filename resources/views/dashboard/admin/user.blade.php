@@ -28,9 +28,12 @@
         <li>
             <a href="{{route('admin.report')}}" class="link">التقارير</a>
         </li>
-        <li>
-            <button  class="btn btn-danger mt-5">خروج</a>
-        </li>
+        <td>
+         <a  button  class="btn btn-danger mt-5" class="nav-link link-danger" href="{{route('admin.logout')}}"
+         onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل الخروج</a>
+        <form action="{{route('admin.logout')}}" method="post" class="d-none"
+         id="logout-form"> @csrf</form>
+</td>
     </ul>
 </div>
     <div class="container">
